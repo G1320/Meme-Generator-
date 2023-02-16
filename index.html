@@ -10,47 +10,91 @@
 </head>
 
 <body onload="onInit()">
-
   <nav class="main-menu flex space-around align-center">
     <h3>Painter</h3>
     <ul class="main-menu-nav clean-list ">
-      <a href="#" class="link-memes">Memes</a>
-      <a href="#" class="link-generator">Generator</a>
-      <a href="#" class="link-about">About</a>
+      <a href="#" onclick="showClickedPage('gallery')" class="link-memes">Memes</a>
+      <a href="#" onclick="showClickedPage('generator')" class="link-generator">Generator</a>
+      <a href="#" onclick="showClickedPage('about')" class="link-about">About</a>
     </ul>
   </nav>
-  <main class="main-content-container grid">
-    <div class="canvas-container">
-      <canvas id="my-canvas" width="400" height="400" style="outline: 1px solid green"></canvas>
+
+  <div class="generator-page">
+
+    <main class="main-content-container grid">
+      <div class="canvas-container">
+        <canvas id="my-canvas" width="400" height="400" style="outline: 1px solid green"></canvas>
+      </div>
+
+      <section class="input-panel col-5 row-6">
+
+        <!-- <form class="txt-inputs-container"> -->
+        <label for="txt">Enter a txt</label>
+        <input class="txt input-panel-cell full " oninput="drawText(this.value)"
+          onblur="createLine(undefined,undefined,this.value), renderTexts()" onchange="modifyLine('0')" type="text"
+          name="txt" id="txt" placeholder="txt" class="txt" />
+        <label for="font">Enter a font</label>
+        <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
+        <label for="font-size">Enter a font size</label>
+        <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size"
+          class="font-size" value="16" />
+        <!-- </form> -->
+        <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+
+        <button class="btn" onclick="onUploadImg()">Upload Image from Canvas</button>
+
+        <select name="selectShape" id="" onchange="onSelectShape(this.value)">
+          <option value="text">Text</option>
+          <option value="line">Line</option>
+        </select>
+        <input type="color" oninput="changeColor(this.value)" />
+        <button onclick="saveCanvas()">Save</button>
+        <button onclick="clearCanvas()">Clear</button>
+        <!-- when click the link run downloadCanvas -->
+        <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+      </section>
+  </div>
+  <div class="gallery-page" hidden>
+    <div class="gallery-container grid col-4">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/1.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/2.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/3.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/4.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/5.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/6.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/7.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/8.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/9.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/10.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/11.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/12.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/13.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/14.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/15.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/16.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/17.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/18.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="about-page" hidden>
+    <div class="content-container grid col-2 row-2">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis suscipit, recusandae ex dolorum
+        accusantium quos quaerat natus libero voluptates nam dolores illo, laboriosam quia nostrum inventore nobis sunt
+        asperiores eveniet modi voluptatem nesciunt temporibus. Dignissimos, voluptates ducimus ipsam hic et, corporis
+        cumque maiores corrupti unde suscipit, expedita perspiciatis adipisci dolorum inventore sit at ullam. Porro,
+        earum repellendus! Recusandae atque fugit suscipit aspernatur adipisci, ut porro nisi eveniet aliquam, sint
+        harum velit maiores tempore voluptatibus quae error quos voluptatem? Corporis!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit blanditiis commodi provident molestias enim
+        vitae at dolore cupiditate eligendi qui!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi vitae, deserunt quaerat, rerum error tenetur
+        cum, inventore omnis soluta odit et suscipit atque adipisci voluptas doloribus ipsa voluptate maiores ex?</p>
     </div>
 
-    <section class="input-panel col-5 row-6">
 
-      <!-- <form class="txt-inputs-container"> -->
-      <label for="txt">Enter a txt</label>
-      <input class="txt input-panel-cell full " oninput="drawText(this.value)"
-        onblur="createLine(undefined,undefined,this.value), renderTexts()" onchange="modifyLine('0')" type="text"
-        name="txt" id="txt" placeholder="txt" class="txt" />
-      <label for="font">Enter a font</label>
-      <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
-      <label for="font-size">Enter a font size</label>
-      <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size" class="font-size"
-        value="16" />
-      <!-- </form> -->
-      <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
 
-      <button class="btn" onclick="onUploadImg()">Upload Image from Canvas</button>
 
-      <select name="selectShape" id="" onchange="onSelectShape(this.value)">
-        <option value="text">Text</option>
-        <option value="line">Line</option>
-      </select>
-      <input type="color" oninput="changeColor(this.value)" />
-      <button onclick="saveCanvas()">Save</button>
-      <button onclick="clearCanvas()">Clear</button>
-      <!-- when click the link run downloadCanvas -->
-      <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
-    </section>
+  </div>
 
   </main>
   <script src="js/utils.js"></script>

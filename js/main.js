@@ -16,9 +16,10 @@ function setShape(shape) {
 }
 
 function getImgForDisplay() {
+  var img = document.querySelector('img .gallery-container');
+  console.log('img: ', img);
   // const img = getImgFromGallery();
   // console.log('img: ', img);
-  // renderImg;
   // console.log('id: ', url);
   // console.log('url: ', id);
 }
@@ -191,4 +192,27 @@ function renderImg(img) {
   gCurrImg = img;
   // Draw the img on the canvas
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
+}
+
+function showClickedPage(pageName) {
+  let generatorPage = document.querySelector('.generator-page');
+  let galleryPage = document.querySelector('.gallery-page');
+  let aboutPage = document.querySelector('.about-page');
+  generatorPage.hidden = true;
+  galleryPage.hidden = true;
+  aboutPage.hidden = true;
+
+  switch (pageName) {
+    case 'generator':
+      generatorPage.hidden = false;
+      break;
+    case 'gallery':
+      galleryPage.hidden = false;
+      break;
+    case 'about':
+      aboutPage.hidden = false;
+      break;
+    default:
+      break;
+  }
 }
