@@ -28,26 +28,32 @@
 
       <section class="input-panel col-5 row-6">
 
-        <!-- <form class="txt-inputs-container"> -->
+        <!-- <form onsubmit="createLine(undefined,undefined,this.value)" class="txt-inputs-container"> -->
         <label for="txt">Enter a txt</label>
-        <input class="txt input-panel-cell full " oninput="drawText(this.value)"
-          onblur="createLine(undefined,undefined,this.value), renderTexts()" onchange="modifyLine('0')" type="text"
-          name="txt" id="txt" placeholder="txt" class="txt" />
-        <label for="font">Enter a font</label>
-        <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
-        <label for="font-size">Enter a font size</label>
-        <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size"
-          class="font-size" value="16" />
-        <!-- </form> -->
-        <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+        <input class="txt input-panel-cell full " oninput="drawTextOnInput(this.value)" type="text" name="txt" id="txt"
+          placeholder="txt" class="txt" />
+        <button onmousedown="createLine(undefined,undefined,this.previousElementSibling.value)"
+          onmouseup="renderTexts()" class="btn-add-text">Add a
+          new text</button>
 
-        <button class="btn" onclick="onUploadImg()">Upload Image from Canvas</button>
-
+        <button onclick="moveLineUp()" class="btt-move-line-up">Move line up</button>
+        <button onclick="moveLineDown()" class="btt-move-line-down">Move line Down</button>
         <select name="selectShape" id="" onchange="onSelectShape(this.value)">
           <option value="text">Text</option>
           <option value="line">Line</option>
         </select>
         <input type="color" oninput="changeColor(this.value)" />
+        <label for="font">Enter a font</label>
+        <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
+        <label for="font-size">Enter a font size</label>
+        <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size"
+          class="font-size" value="16" />
+        </form>
+        <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+
+        <button class="btn" onclick="onUploadImg()">Upload Image from Canvas</button>
+
+
         <button onclick="saveCanvas()">Save</button>
         <button onclick="clearCanvas()">Clear</button>
         <!-- when click the link run downloadCanvas -->

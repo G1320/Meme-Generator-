@@ -1,3 +1,5 @@
+let gCurrLineHeight;
+
 var gMeme = {
   selectedImgId: 5,
   selectedLineIdx: 0,
@@ -11,18 +13,27 @@ var gMeme = {
   ],
 };
 
-function createLine(x, y, align = 'center', color) {
-  const { txt, fontSize: size, font } = getTxtInfo();
+function createLine(x, y, txt, align, color) {
+  console.log('Created a line!');
+  const { fontSize: size } = getTxtInfo();
 
   gMeme.lines.push({
     txt,
     size,
-    align,
-    color,
+    align: align || 'center',
+    color: color || 'blue',
   });
   drawText(txt, x, y, size, color, font);
+  gMeme.selectedLineIdx++;
+  renderTexts();
+  //
 
   console.log('gMeme.lines: ', gMeme.lines);
+}
+
+function moveLineUp(selectedLineIdx = 0) {
+  gCurrLineHeight += 10;
+  clearCanvas();
 }
 
 function getLineInfo(selectedLineIdx) {

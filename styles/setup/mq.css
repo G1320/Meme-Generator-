@@ -1,6 +1,17 @@
 @media screen and (max-width: 500px) {
   .canvas-container {
     width: 80vw;
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 930px) {
+  .main-content-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 60vw;
+    max-width: 500px;
+    max-height: 500px;
   }
 }
 

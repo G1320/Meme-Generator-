@@ -4,6 +4,10 @@ function onInit() {
   resizeCanvas();
   addListeners();
   getImgForDisplay();
+  renderTexts();
+  // addEventListener('resize', () => {
+  //   resizeCanvas();
+  // });
 }
 
 function renderCanvas() {
@@ -15,10 +19,11 @@ function renderCanvas() {
 }
 
 function renderTexts() {
-  !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
+  // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   //prettier-ignore
   gMeme.lines.forEach((line, idx )=> {
-    let x = 200;
+    console.log('line: ', line);
+    let x = 175;
     let y = idx * 50 + 50;
     const { txt, size, align, color } = getLineInfo(idx);
     drawText(txt, x, y, size, color, 'impact', align);
@@ -54,8 +59,4 @@ function addTouchListeners() {
 
 function onSelectShape(shape) {
   setShape(shape);
-}
-
-function onClickedCreateAnotherLine() {
-  createLine(x, y, txt, size, align, color);
 }
