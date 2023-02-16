@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canvas</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body onload="onInit()">
+
+  <nav class="main-menu flex space-around align-center">
+    <h3>Painter</h3>
+    <ul class="main-menu-nav clean-list ">
+      <a href="#" class="link-memes">Memes</a>
+      <a href="#" class="link-generator">Generator</a>
+      <a href="#" class="link-about">About</a>
+    </ul>
+  </nav>
+  <main class="main-content-container grid">
+    <div class="canvas-container">
+      <canvas id="my-canvas" width="400" height="400" style="outline: 1px solid green"></canvas>
+    </div>
+
+    <section class="input-panel col-5 row-6">
+
+      <!-- <form class="txt-inputs-container"> -->
+      <label for="txt">Enter a txt</label>
+      <input class="txt input-panel-cell full " oninput="drawText(this.value)"
+        onblur="createLine(undefined,undefined,this.value), renderTexts()" onchange="modifyLine('0')" type="text"
+        name="txt" id="txt" placeholder="txt" class="txt" />
+      <label for="font">Enter a font</label>
+      <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
+      <label for="font-size">Enter a font size</label>
+      <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size" class="font-size"
+        value="16" />
+      <!-- </form> -->
+      <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+
+      <button class="btn" onclick="onUploadImg()">Upload Image from Canvas</button>
+
+      <select name="selectShape" id="" onchange="onSelectShape(this.value)">
+        <option value="text">Text</option>
+        <option value="line">Line</option>
+      </select>
+      <input type="color" oninput="changeColor(this.value)" />
+      <button onclick="saveCanvas()">Save</button>
+      <button onclick="clearCanvas()">Clear</button>
+      <!-- when click the link run downloadCanvas -->
+      <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+    </section>
+
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/services/generator-services.js"></script>
+  <script src="js/services/gallery-services.js"></script>
+  <script src="js/services/upload-services.js"></script>
+  <script src="js/controllers/generator-controller.js"></script>
+  <script src="js/controllers/gallery-controller.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

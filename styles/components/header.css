@@ -1,0 +1,31 @@
+/* .main-header {
+  height: 160px;
+  color: #ffffff;
+  background-color: #292929;
+} */
+
+/* .main-header .main-menu a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+} */
+
+/* .main-header .main-menu > * {
+  margin-inline-start: 50px;
+} */
+
+ul .main-menu {
+  height: 160px;
+  align-items: center;
+}
+
+.main-menu a {
+  height: 100%;
+  border: 1px solid red;
+}
+
+h3 {
+  font-size: 3em;
+  /* margin-block: 15px; */
+  color: var(--color-dark-primary);
+}

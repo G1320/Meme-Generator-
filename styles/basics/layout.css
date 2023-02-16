@@ -1,0 +1,58 @@
+/* MAIN LAYOUT */
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+}
+
+.main-layout > *:not(.full) {
+  grid-column: 2;
+}
+
+.main-layout > .full {
+  grid-column: 1 / -1;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+}
+
+.input-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.main-content-container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* CARD LAYOUT */
+
+.card-layout {
+  margin-bottom: 130px;
+}
+
+.card {
+  gap: 2em;
+}
+
+.card h1 {
+  margin-block-start: 0;
+}
+
+.btn {
+  width: 200px;
+}
+
+.next-btn-container {
+  width: 200px;
+  grid-column: 2;
+  place-self: end;
+}
+.main-content.card-layout {
+  width: 980px;
+  margin: auto auto;
+  gap: 3em;
+}
