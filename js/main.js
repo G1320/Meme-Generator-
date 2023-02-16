@@ -11,14 +11,6 @@ let gLastDiff;
 let gClickedPos;
 let gCurrImg;
 
-function onInit() {
-  gElCanvas = document.querySelector('#my-canvas');
-  gCtx = gElCanvas.getContext('2d');
-  resizeCanvas();
-  addListeners();
-  getImgForDisplay();
-}
-
 function setShape(shape) {
   gCurrShape = shape;
 }
@@ -128,11 +120,11 @@ function drawShape(x, y, size, color, diff) {
 }
 
 function drawText(txt, x = 175, y = 100, size = 20, color = 'blue', font = 'impact', align) {
+  // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   console.log(gMeme.lines);
   if (gMeme.lines.length < 0) {
     const { fontSize, font } = getTxtInfo();
     var newTxt = gMeme.lines[gMeme.lines.length].txt;
-    // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
     gCtx.lineWidth = 1;
     gCtx.strokeStyle = 'brown';
     gCtx.fillStyle = color;

@@ -1,3 +1,11 @@
+function onInit() {
+  gElCanvas = document.querySelector('#my-canvas');
+  gCtx = gElCanvas.getContext('2d');
+  resizeCanvas();
+  addListeners();
+  getImgForDisplay();
+}
+
 function renderCanvas() {
   //Set the background color to grey
   gCtx.fillStyle = '#ede5ff59';
@@ -10,7 +18,7 @@ function renderTexts() {
   !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   //prettier-ignore
   gMeme.lines.forEach((line, idx )=> {
-    let x = 175;
+    let x = 200;
     let y = idx * 50 + 50;
     const { txt, size, align, color } = getLineInfo(idx);
     drawText(txt, x, y, size, color, 'impact', align);
