@@ -1,15 +1,23 @@
 .input-panel {
   grid-template-columns: repeat(4, 1fr);
+  border: 3px solid red;
+  width: 60vw;
+  max-height: 300px;
+}
+
+.input-panel *:not(:first-child) {
+  font-size: 0.8rem;
+  max-width: 60px;
 }
 
 /* button {
   font-size: 1em;
 } */
 
-input[type='file'] {
+/* input[type='file'] {
   font-size: 1em;
 }
 
 a {
   font-size: 1.5em;
-}
+} */

@@ -19,11 +19,15 @@
 }
 
 .input-panel {
+  margin: auto;
+  max-width: 450px;
   display: grid;
   gap: 10px;
 }
 
 .main-content-container {
+  margin: auto;
+  width: 60vw;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }

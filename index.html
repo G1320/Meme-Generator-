@@ -26,10 +26,10 @@
         <canvas id="my-canvas" width="400" height="400" style="outline: 1px solid green"></canvas>
       </div>
 
-      <section class="input-panel col-5 row-6">
+      <section class="input-panel grid col-5 row-6">
 
         <!-- <form onsubmit="createLine(undefined,undefined,this.value)" class="txt-inputs-container"> -->
-        <label for="txt">Enter a txt</label>
+        <!-- <label for="txt">Enter a txt</label> -->
         <input class="txt input-panel-cell full " oninput="drawTextOnInput(this.value)" type="text" name="txt" id="txt"
           placeholder="txt" class="txt" />
         <button onmousedown="createLine(undefined,undefined,this.previousElementSibling.value)"
@@ -55,7 +55,7 @@
 
 
         <button onclick="saveCanvas()">Save</button>
-        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="clearCanvas()">Clear Text</button>
         <!-- when click the link run downloadCanvas -->
         <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
       </section>
