@@ -156,6 +156,13 @@ function moveLineDown() {
   renderTexts();
 }
 
+function selectPrevLine() {
+  gMeme.selectedLineIdx--;
+}
+function selectNextLine() {
+  gMeme.selectedLineIdx++;
+}
+
 function drawLine(x, y, size, color, diff) {
   // if (Math.abs(diff- gLastDiff)>5) {
   if (diff === gLastDiff) gCtx.beginPath();

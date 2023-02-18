@@ -34,11 +34,6 @@ function createLine(x, y, align) {
   console.log('gMeme.lines: ', gMeme.lines);
 }
 
-function moveLineUp(selectedLineIdx = 0) {
-  gCurrLineHeight += 10;
-  clearCanvas();
-}
-
 function getLineInfo(selectedLineIdx) {
   if (!gMeme.lines.length) return;
   const { lat, txt, size, align, color } = gMeme.lines[selectedLineIdx];

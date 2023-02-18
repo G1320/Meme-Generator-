@@ -36,8 +36,10 @@
         <button onclick="createLine(undefined,undefined,this.previousElementSibling.value)" class="btn-add-text">
           +</button>
 
-        <button onclick="moveLineUp()" class="btt-move-line-up">˄</button>
-        <button onclick="moveLineDown()" class="btt-move-line-down">˅</button>
+        <button onclick="moveLineUp()" class="btn-move-line-up">˄</button>
+        <button onclick="moveLineDown()" class="btn-move-line-down">˅</button>
+        <button onclick="selectPrevLine()" class="btn-select-next-line">Select Prev</button>
+        <button onclick="selectNextLine()" class="btn-select-next-line">Select Prev</button>
         <select name="selectShape" id="" onchange="onSelectShape(this.value)">
           <option value="text">Text</option>
           <option value="line">Line</option>
