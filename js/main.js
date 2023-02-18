@@ -203,6 +203,7 @@ function changeColor(color) {
 function clearCanvas(isTrue) {
   if (isTrue) {
     gMeme.lines = [];
+    gMeme.selectedLineIdx = -1;
   }
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
   if (gCurrImg) renderImg(gCurrImg);

@@ -42,17 +42,17 @@
         <button onclick="selectNextLine()" class="btn-select-next-line">Select Next</button>
 
 
-
+        <!-- 
         <select name="selectShape" id="" onchange="onSelectShape(this.value)">
           <option value="text">Text</option>
           <option value="line">Line</option>
-        </select>
+        </select> -->
+        <input class="color-selector" type="color" oninput="changeColor(this.value) " value="black" />
         <button onclick="moveLineLeft()" class="btn-move-line-Left">˂</button>
         <button onclick="moveLineRight()" class="btn-move-line-right">˃</button>
-        <input class="color-selector" type="color" oninput="changeColor(this.value) " value="black" />
-        <label for="font">Enter a font</label>
+        <!-- <label for="font">Enter a font</label> -->
         <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
-        <label for="font-size">Enter a font size</label>
+        <!-- <label for="font-size">Enter a font size</label> -->
         <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size"
           class="font-size" value="16" />
         </form>
