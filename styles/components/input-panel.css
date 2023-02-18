@@ -22,10 +22,6 @@
   border-radius: var(--br-m);
 }
 
-/* button {
-  font-size: 1em;
-} */
-
 input[type='file'] {
   width: 60px;
   font-size: 0.6rem;
@@ -42,7 +38,3 @@ input[type='file'] {
   color: aliceblue;
   border-radius: var(--br-m);
 }
-
-/* a {
-  font-size: 1.5em;
-} */

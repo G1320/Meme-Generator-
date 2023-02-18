@@ -31,32 +31,3 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-
-/* CARD LAYOUT */
-
-.card-layout {
-  margin-bottom: 130px;
-}
-
-.card {
-  gap: 2em;
-}
-
-.card h1 {
-  margin-block-start: 0;
-}
-
-.btn {
-  width: 200px;
-}
-
-.next-btn-container {
-  width: 200px;
-  grid-column: 2;
-  place-self: end;
-}
-.main-content.card-layout {
-  width: 980px;
-  margin: auto auto;
-  gap: 3em;
-}
