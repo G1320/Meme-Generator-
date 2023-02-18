@@ -92,9 +92,9 @@ function changeColor(color) {
   gColor = color;
 }
 
-function clearCanvas(isTrue) {
-  if (isTrue) {
-    if (gMeme.lines.length > 1 && !confirm('Maybe only last the line?')) {
+function clearCanvas(isCalledViaElBtn) {
+  if (isCalledViaElBtn) {
+    if (gMeme.lines.length > 1 && !confirm('Maybe only the last line?')) {
       gMeme.lines = [];
       gMeme.selectedLineIdx = -1;
     } else {
