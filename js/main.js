@@ -2,10 +2,7 @@ const TOUCH_EVS = ['touchstart', 'touchmove', 'touchend'];
 
 let gElCanvas;
 let gCtx;
-let gIsDrag;
 let gColor;
-let gLastDiff;
-let gClickedPos;
 let gCurrImg;
 
 function getTxtInfo() {
@@ -18,8 +15,8 @@ function getTxtInfo() {
   return { txt, fontSize, font, color };
 }
 
-function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', align) {
-  const { color } = getTxtInfo();
+function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
+  const { color, font } = getTxtInfo();
   clearCanvas();
   gCtx.lineWidth = 0.1;
   gCtx.strokeStyle = 'black';
@@ -80,7 +77,7 @@ function selectPrevLine() {
   renderSelectedLineIdx();
 }
 function selectNextLine() {
-  if (gMeme.selectedLineIdx === gMeme.lines.length) return;
+  if (gMeme.selectedLineIdx === gMeme.lines.length - 1) return;
   gMeme.selectedLineIdx++;
   renderSelectedLineIdx();
 }
@@ -90,8 +87,6 @@ function renderSelectedLineIdx() {
   drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 20, gColor);
   renderTexts();
 }
-
-function deleteSelectedLine() {}
 
 function changeColor(color) {
   gColor = color;
