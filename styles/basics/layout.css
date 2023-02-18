@@ -23,6 +23,7 @@
   max-width: 450px;
   display: grid;
   gap: 10px;
+  border-radius: 6px;
 }
 
 .main-content-container {

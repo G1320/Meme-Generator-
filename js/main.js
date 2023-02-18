@@ -42,7 +42,7 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', alig
   }, 1);
 }
 
-function drawText(txt, x = 175, y = 100, size = 20, color, font = 'impact', align) {
+function drawText(txt, x, y, size, color, font, align) {
   gCtx.beginPath();
   gCtx.lineWidth = 0.1;
   gCtx.strokeStyle = 'black';
@@ -55,6 +55,7 @@ function drawText(txt, x = 175, y = 100, size = 20, color, font = 'impact', alig
 }
 
 function moveLine(direction) {
+  if (gMeme.selectedLineIdx === -1) return;
   switch (direction) {
     case 'up':
       gMeme.lines[gMeme.selectedLineIdx].lat += -10;
@@ -79,7 +80,7 @@ function selectPrevLine() {
   renderSelectedLineIdx();
 }
 function selectNextLine() {
-  if (gMeme.selectedLineIdx === gMeme.lines.length) return;
+  if (gMeme.selectedLineIdx === gMeme.lines.length - 1) return;
   gMeme.selectedLineIdx++;
   renderSelectedLineIdx();
 }
