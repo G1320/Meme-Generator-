@@ -80,7 +80,7 @@ function selectPrevLine() {
   renderSelectedLineIdx();
 }
 function selectNextLine() {
-  if (gMeme.selectedLineIdx === gMeme.lines.length - 1) return;
+  if (gMeme.selectedLineIdx === gMeme.lines.length) return;
   gMeme.selectedLineIdx++;
   renderSelectedLineIdx();
 }
@@ -99,7 +99,7 @@ function changeColor(color) {
 
 function clearCanvas(isTrue) {
   if (isTrue) {
-    if (!confirm('Maybe only last line?')) {
+    if (gMeme.lines.length > 1 && !confirm('Maybe only last the line?')) {
       gMeme.lines = [];
       gMeme.selectedLineIdx = -1;
     } else {
