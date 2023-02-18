@@ -3,11 +3,7 @@ function onInit() {
   gCtx = gElCanvas.getContext('2d');
   resizeCanvas();
   addListeners();
-  getImgForDisplay();
   renderTexts();
-  // addEventListener('resize', () => {
-  //   resizeCanvas();
-  // });
 }
 
 function renderCanvas() {
@@ -21,9 +17,8 @@ function renderCanvas() {
 function renderTexts() {
   //prettier-ignore
   gMeme.lines.forEach((line, idx )=> {
-    
-    const {lat, lan, txt, size, align, color } = getLineInfo(idx);
-    drawText(txt, lan, lat, size, color, 'impact', align);
+    const {lat, lan, txt, size, align, color, font } = getLineInfo(idx);
+    drawText(txt, lan, lat, size, color, font, align);
   });
 }
 
@@ -34,24 +29,10 @@ function resizeCanvas() {
 }
 
 function addListeners() {
-  addMouseListeners();
-  addTouchListeners();
   //Listen for resize ev
   window.addEventListener('resize', () => {
     resizeCanvas();
   });
-}
-
-function addMouseListeners() {
-  gElCanvas.addEventListener('mousedown', onDown);
-  gElCanvas.addEventListener('mousemove', onMove);
-  gElCanvas.addEventListener('mouseup', onUp);
-}
-
-function addTouchListeners() {
-  gElCanvas.addEventListener('touchstart', onDown);
-  gElCanvas.addEventListener('touchmove', onMove);
-  gElCanvas.addEventListener('touchend', onUp);
 }
 
 function onSelectShape(shape) {

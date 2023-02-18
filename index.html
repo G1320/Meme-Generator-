@@ -35,8 +35,8 @@
 
         <button onclick="createLine(undefined,undefined,this.previousElementSibling.value)" class="btn-add-text">
           +</button>
-        <button onclick="moveLineUp()" class="btn-move-line-up">˄</button>
-        <button onclick="moveLineDown()" class="btn-move-line-down">˅</button>
+        <button onclick="moveLine('up')" class="btn-move-line-up">˄</button>
+        <button onclick="moveLine('down')" class="btn-move-line-down">˅</button>
 
         <button onclick="selectPrevLine()" class="btn-select-prev-line">Select Prev</button>
         <button onclick="selectNextLine()" class="btn-select-next-line">Select Next</button>
@@ -48,8 +48,8 @@
           <option value="line">Line</option>
         </select> -->
         <input class="color-selector" type="color" oninput="changeColor(this.value) " value="black" />
-        <button onclick="moveLineLeft()" class="btn-move-line-Left">˂</button>
-        <button onclick="moveLineRight()" class="btn-move-line-right">˃</button>
+        <button onclick="moveLine('left')" class="btn-move-line-Left">˂</button>
+        <button onclick="moveLine('right')" class="btn-move-line-right">˃</button>
         <!-- <label for="font">Enter a font</label> -->
         <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
         <!-- <label for="font-size">Enter a font size</label> -->
