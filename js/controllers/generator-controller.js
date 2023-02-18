@@ -19,17 +19,11 @@ function renderCanvas() {
 }
 
 function renderTexts() {
-  // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   //prettier-ignore
   gMeme.lines.forEach((line, idx )=> {
-    // console.log('line: ', line);
-    let x = gElCanvas.width / 2;
-    gCurrLineLat = idx * 50 + 50
-    let y = gCurrLineLat ;
-
-    const {lat, txt, size, align, color } = getLineInfo(idx);
-    console.log('lat: ', lat);
-    drawText(txt, x, lat, size, color, 'impact', align);
+    
+    const {lat, lan, txt, size, align, color } = getLineInfo(idx);
+    drawText(txt, lan, lat, size, color, 'impact', align);
   });
 }
 

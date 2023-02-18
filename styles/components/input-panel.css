@@ -2,7 +2,7 @@
   grid-template-columns: repeat(4, 1fr);
   border: 3px solid var(--color-dark-primary);
   width: 60vw;
-  max-height: 300px;
+  max-height: 380px;
 }
 
 .input-panel * {
@@ -29,7 +29,6 @@
 input[type='file'] {
   width: 60px;
   font-size: 0.6rem;
-  grid-column: 4;
   white-space: inherit;
 }
 .color-selector {

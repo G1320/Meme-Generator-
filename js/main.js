@@ -155,6 +155,16 @@ function moveLineDown() {
   clearCanvas();
   renderTexts();
 }
+function moveLineLeft() {
+  gMeme.lines[gMeme.selectedLineIdx].lan += -10;
+  clearCanvas();
+  renderTexts();
+}
+function moveLineRight() {
+  gMeme.lines[gMeme.selectedLineIdx].lan += 10;
+  clearCanvas();
+  renderTexts();
+}
 
 function selectPrevLine() {
   gMeme.selectedLineIdx--;
@@ -204,6 +214,7 @@ function renderImg(img) {
   gCurrImg = img;
   // Draw the img on the canvas
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
+  renderTexts();
 }
 
 function showClickedPage(pageName) {

@@ -10,6 +10,7 @@ var gMeme = {
       align: 'left',
       color: 'red',
       lat: 50,
+      lan: 200,
     },
   ],
 };
@@ -23,6 +24,7 @@ function createLine(x, y, align) {
     align: align || 'center',
     color: color,
     lat: gMeme.lines.length * 50 + 50,
+    lan: gElCanvas.width / 2,
   });
   // drawText(txt, x, y, size, color, font);
   console.log('Created a line!');
@@ -36,8 +38,8 @@ function createLine(x, y, align) {
 
 function getLineInfo(selectedLineIdx) {
   if (!gMeme.lines.length) return;
-  const { lat, txt, size, align, color } = gMeme.lines[selectedLineIdx];
-  return { lat, txt, size, align, color };
+  const { lat, lan, txt, size, align, color } = gMeme.lines[selectedLineIdx];
+  return { lat, lan, txt, size, align, color };
 }
 
 function getLastLine() {
