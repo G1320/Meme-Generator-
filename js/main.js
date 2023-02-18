@@ -87,7 +87,7 @@ function selectNextLine() {
 
 function renderSelectedLineIdx() {
   clearCanvas();
-  drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 16, 'white');
+  drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 20, gColor);
   renderTexts();
 }
 
@@ -99,9 +99,14 @@ function changeColor(color) {
 
 function clearCanvas(isTrue) {
   if (isTrue) {
-    gMeme.lines = [];
-    gMeme.selectedLineIdx = -1;
+    if (!confirm('Maybe only last line?')) {
+      gMeme.lines = [];
+      gMeme.selectedLineIdx = -1;
+    } else {
+      gMeme.lines.pop();
+    }
   }
+  renderTexts();
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
   if (gCurrImg) renderImg(gCurrImg);
 }
