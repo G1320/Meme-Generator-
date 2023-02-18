@@ -9,22 +9,23 @@ var gMeme = {
       size: 20,
       align: 'left',
       color: 'red',
+      lat: 50,
     },
   ],
 };
 
 function createLine(x, y, align) {
-  console.log('Created a line!');
   const { txt, fontSize: size, color } = getTxtInfo();
-
+  if (!txt) return;
   gMeme.lines.push({
     txt,
     size,
     align: align || 'center',
     color: color,
-    // lat: lat || 0,
+    lat: gMeme.lines.length * 50 + 50,
   });
   // drawText(txt, x, y, size, color, font);
+  console.log('Created a line!');
   gMeme.selectedLineIdx++;
   gCurrLineLat += 50;
   renderTexts();
@@ -40,8 +41,8 @@ function moveLineUp(selectedLineIdx = 0) {
 
 function getLineInfo(selectedLineIdx) {
   if (!gMeme.lines.length) return;
-  const { txt, size, align, color } = gMeme.lines[selectedLineIdx];
-  return { txt, size, align, color };
+  const { lat, txt, size, align, color } = gMeme.lines[selectedLineIdx];
+  return { lat, txt, size, align, color };
 }
 
 function getLastLine() {

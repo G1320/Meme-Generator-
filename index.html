@@ -32,6 +32,7 @@
         <!-- <label for="txt">Enter a txt</label> -->
         <input class="txt input-panel-cell full " oninput=" drawTextOnInput(this.value)" type="text" name="txt" id="txt"
           placeholder="txt" class="txt" />
+
         <button onclick="createLine(undefined,undefined,this.previousElementSibling.value)" class="btn-add-text">
           +</button>
 
@@ -49,12 +50,10 @@
           class="font-size" value="16" />
         </form>
 
-
         <button class="btn" onclick="onUploadImg()">Share</button>
 
-
         <button onclick="saveCanvas()">Save</button>
-        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="clearCanvas(true)">Clear</button>
         <!-- when click the link run downloadCanvas -->
         <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
         <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />

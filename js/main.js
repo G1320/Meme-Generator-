@@ -55,11 +55,6 @@ function onDown(ev) {
   console.log('pos', pos);
   // let txt = gMeme.lines[0].txt;
   const { x, y } = pos;
-  // const { txt, fontSize } = getTxtInfo();
-  // if (isMouseOnElement(x, y, element)) {
-  //   renderImg(gCurrImg);
-  // }
-  // createLine(x, y, txt, fontSize, align, color);
 
   // gClickedPos = pos
   gIsDrag = true;
@@ -68,18 +63,6 @@ function onDown(ev) {
   document.body.style.cursor = 'grabbing';
   gLastPos = pos;
 }
-
-// function isMouseOnElement(x, y, element) {
-//   let left = element.x;
-//   let right = element.x + element.width;
-//   let top = element.y;
-//   let bottom = element.y + element.height;
-
-//   if (x > left && x < right && y > top && y < bottom) {
-//     return true;
-//   }
-//   return false;
-// }
 
 function onMove(ev) {
   // console.log('move')
@@ -130,7 +113,7 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', alig
   clearCanvas();
   // renderTexts();
   gCtx.lineWidth = 1;
-  gCtx.strokeStyle = 'brown';
+  gCtx.strokeStyle = 'black';
   gCtx.fillStyle = color;
   gCtx.font = `${size}px ${font}`;
   gCtx.textAlign = 'center';
@@ -138,6 +121,9 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', alig
 
   gCtx.fillText(txt, x, 380); // Draws (fills) a given text at the given (x, y) position.
   gCtx.strokeText(txt, x, 380);
+  gCtx.lineWidth = 3;
+  gCtx.fill();
+  gCtx.stroke();
   setTimeout(() => {
     // clearCanvas();
     renderTexts();
@@ -146,13 +132,10 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', alig
 
 function drawText(txt, x = 175, y = 100, size = 20, color, font = 'impact', align) {
   gCtx.beginPath();
-  // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   console.log(gMeme.lines);
 
-  // console.log('newTxt: ', newTxt);
-  // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   gCtx.lineWidth = 1;
-  gCtx.strokeStyle = 'brown';
+  gCtx.strokeStyle = 'black';
   gCtx.fillStyle = color;
   gCtx.font = `${size}px ${font}`;
   gCtx.textAlign = 'center';
@@ -160,7 +143,17 @@ function drawText(txt, x = 175, y = 100, size = 20, color, font = 'impact', alig
   console.log('Drew');
   gCtx.fillText(txt, x, y); // Draws (fills) a given text at the given (x, y) position.
   gCtx.strokeText(txt, x, y); // Draws (strokes) a given text at the given (x, y) position.
-  // console.log(`Drew "${txt}" size ${size}, color ${color}, align ${align} `);
+}
+
+function moveLineUp() {
+  gMeme.lines[gMeme.selectedLineIdx].lat += -10;
+  clearCanvas();
+  renderTexts();
+}
+function moveLineDown() {
+  gMeme.lines[gMeme.selectedLineIdx].lat += 10;
+  clearCanvas();
+  renderTexts();
 }
 
 function drawLine(x, y, size, color, diff) {
@@ -190,7 +183,10 @@ function changeColor(color) {
   gColor = color;
 }
 
-function clearCanvas() {
+function clearCanvas(isTrue) {
+  if (isTrue) {
+    gMeme.lines = [];
+  }
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
   if (gCurrImg) renderImg(gCurrImg);
   console.log('Cleared Canvas');
@@ -198,7 +194,6 @@ function clearCanvas() {
 
 function renderImg(img) {
   console.log('Rendered img');
-  // console.log('img: ', img);
   gCurrImg = img;
   // Draw the img on the canvas
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
