@@ -103,12 +103,14 @@ function clearCanvas(isTrue) {
       gMeme.lines = [];
       gMeme.selectedLineIdx = -1;
     } else {
+      console.log(' gMeme.lines: ', gMeme.lines);
       gMeme.lines.pop();
+      console.log(' gMeme.lines: ', gMeme.lines);
     }
   }
-  renderTexts();
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
   if (gCurrImg) renderImg(gCurrImg);
+  renderTexts();
 }
 
 function renderImg(img) {
