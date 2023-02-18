@@ -23,7 +23,7 @@ function createLine(x, y, txt, align, color) {
     align: align || 'center',
     color: color || 'blue',
   });
-  drawText(txt, x, y, size, color, font);
+  // drawText(txt, x, y, size, color, font);
   gMeme.selectedLineIdx++;
   renderTexts();
   //

@@ -140,6 +140,7 @@ function drawTextOnInput(txt, x = 175, y = 100, size = 20, color = 'blue', font 
 }
 
 function drawText(txt, x = 175, y = 100, size = 20, color = 'blue', font = 'impact', align) {
+  gCtx.beginPath();
   !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   console.log(gMeme.lines);
 

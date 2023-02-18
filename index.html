@@ -32,54 +32,54 @@
         <!-- <label for="txt">Enter a txt</label> -->
         <input class="txt input-panel-cell full " oninput="drawTextOnInput(this.value)" type="text" name="txt" id="txt"
           placeholder="txt" class="txt" />
-        <button onmousedown="createLine(undefined,undefined,this.previousElementSibling.value)"
-          onmouseup="renderTexts()" class="btn-add-text">Add a
-          new text</button>
+        <button onclick="createLine(undefined,undefined,this.previousElementSibling.value)" class="btn-add-text">
+          +</button>
 
-        <button onclick="moveLineUp()" class="btt-move-line-up">Move line up</button>
-        <button onclick="moveLineDown()" class="btt-move-line-down">Move line Down</button>
+        <button onclick="moveLineUp()" class="btt-move-line-up">˄</button>
+        <button onclick="moveLineDown()" class="btt-move-line-down">˅</button>
         <select name="selectShape" id="" onchange="onSelectShape(this.value)">
           <option value="text">Text</option>
           <option value="line">Line</option>
         </select>
-        <input type="color" oninput="changeColor(this.value)" />
+        <input class="color-selector" type="color" oninput="changeColor(this.value)" />
         <label for="font">Enter a font</label>
         <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
         <label for="font-size">Enter a font size</label>
         <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size"
           class="font-size" value="16" />
         </form>
+
         <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
 
-        <button class="btn" onclick="onUploadImg()">Upload Image from Canvas</button>
+        <button class="btn" onclick="onUploadImg()">Share</button>
 
 
         <button onclick="saveCanvas()">Save</button>
-        <button onclick="clearCanvas()">Clear Text</button>
+        <button onclick="clearCanvas()">Clear</button>
         <!-- when click the link run downloadCanvas -->
         <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
       </section>
   </div>
   <div class="gallery-page" hidden>
     <div class="gallery-container grid col-4">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/1.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/2.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/3.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/4.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/5.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/6.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/7.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/8.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/9.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/10.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/11.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/12.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/13.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/14.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/15.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/16.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/17.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="/img/meme-imgs (square)/18.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/1.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/2.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/3.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/4.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/5.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/6.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/7.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/8.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/9.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/10.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/11.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/12.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/13.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/14.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/15.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/16.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/17.jpg" alt="">
+      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/18.jpg" alt="">
     </div>
   </div>
 

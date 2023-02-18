@@ -5,19 +5,42 @@
   max-height: 300px;
 }
 
-.input-panel *:not(:first-child) {
+.input-panel * {
+  text-align: center;
+}
+
+.input-panel *:not(:first-child):not(.color-selector) {
+  place-self: center;
   font-size: 0.8rem;
+  width: 100px;
+  height: 60px;
   max-width: 60px;
+  border: var(wall-border);
+  background-color: var(--color-dark-primary);
+  color: aliceblue;
+  border-radius: var(--br-m);
 }
 
 /* button {
   font-size: 1em;
 } */
 
-/* input[type='file'] {
-  font-size: 1em;
+input[type='file'] {
+  width: 50px;
+  white-space: inherit;
+}
+.color-selector {
+  place-self: center;
+  font-size: 0.8rem;
+  width: 100px;
+  height: 60px;
+  max-width: 60px;
+  border: var(wall-border);
+  background-color: aliceblue;
+  color: aliceblue;
+  border-radius: var(--br-m);
 }
 
-a {
+/* a {
   font-size: 1.5em;
 } */
