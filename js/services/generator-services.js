@@ -1,4 +1,4 @@
-let gCurrLineHeight;
+let gCurrLineLat;
 
 var gMeme = {
   selectedImgId: 5,
@@ -13,18 +13,20 @@ var gMeme = {
   ],
 };
 
-function createLine(x, y, txt, align, color) {
+function createLine(x, y, align) {
   console.log('Created a line!');
-  const { fontSize: size } = getTxtInfo();
+  const { txt, fontSize: size, color } = getTxtInfo();
 
   gMeme.lines.push({
     txt,
     size,
     align: align || 'center',
-    color: color || 'blue',
+    color: color,
+    // lat: lat || 0,
   });
   // drawText(txt, x, y, size, color, font);
   gMeme.selectedLineIdx++;
+  gCurrLineLat += 50;
   renderTexts();
   //
 
@@ -44,21 +46,4 @@ function getLineInfo(selectedLineIdx) {
 
 function getLastLine() {
   return gMeme.lines.pop();
-}
-
-function modifyLine(selectedLineIdx) {
-  if (selectedLineIdx === 1) {
-    // WILL NEED TO RE RENDER THE COMPLETE CANVAS VOR EACH CHANGE
-  }
-  //   console.log('selectedLineIdx: ', +selectedLineIdx);
-  //   const { txt, font, fontSize } = getTxtInfo();
-  //   let x = 100;
-  //   let y = 100;
-  //   let color = gColor;
-  //   let currLine = gMeme.lines[+selectedLineIdx];
-  //   console.log('currLine: ', currLine);
-  //   currLine.txt = txt;
-  //   currLine.font = font;
-  //   currLine.fontSize = fontSize;
-  //   drawText(txt, x, y, fontSize, color, font);
 }

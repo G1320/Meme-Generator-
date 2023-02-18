@@ -17,6 +17,7 @@
 ul .main-menu {
   height: 160px;
   align-items: center;
+  align-content: space-around;
 }
 
 .main-menu a {

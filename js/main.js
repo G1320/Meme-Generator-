@@ -47,7 +47,7 @@ function getEvPos(ev) {
 
 function onDown(ev) {
   console.log('Down');
-  const color = gColor;
+  // const color = gColor;
   let align = 'center';
 
   // Get the ev pos from mouse or touch
@@ -125,9 +125,10 @@ function drawShape(x, y, size, color, diff) {
   }
 }
 
-function drawTextOnInput(txt, x = 175, y = 100, size = 20, color = 'blue', font = 'impact', align) {
-  !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
-  renderTexts();
+function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', align) {
+  const { color } = getTxtInfo();
+  clearCanvas();
+  // renderTexts();
   gCtx.lineWidth = 1;
   gCtx.strokeStyle = 'brown';
   gCtx.fillStyle = color;
@@ -135,13 +136,17 @@ function drawTextOnInput(txt, x = 175, y = 100, size = 20, color = 'blue', font 
   gCtx.textAlign = 'center';
   gCtx.textBaseline = 'middle';
 
-  gCtx.fillText(txt, x, y); // Draws (fills) a given text at the given (x, y) position.
-  gCtx.strokeText(txt, x, y);
+  gCtx.fillText(txt, x, 380); // Draws (fills) a given text at the given (x, y) position.
+  gCtx.strokeText(txt, x, 380);
+  setTimeout(() => {
+    // clearCanvas();
+    renderTexts();
+  }, 1);
 }
 
-function drawText(txt, x = 175, y = 100, size = 20, color = 'blue', font = 'impact', align) {
+function drawText(txt, x = 175, y = 100, size = 20, color, font = 'impact', align) {
   gCtx.beginPath();
-  !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
+  // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   console.log(gMeme.lines);
 
   // console.log('newTxt: ', newTxt);
@@ -152,10 +157,10 @@ function drawText(txt, x = 175, y = 100, size = 20, color = 'blue', font = 'impa
   gCtx.font = `${size}px ${font}`;
   gCtx.textAlign = 'center';
   gCtx.textBaseline = 'middle';
-
+  console.log('Drew');
   gCtx.fillText(txt, x, y); // Draws (fills) a given text at the given (x, y) position.
   gCtx.strokeText(txt, x, y); // Draws (strokes) a given text at the given (x, y) position.
-  console.log(`Drew "${txt}" size ${size}, color ${color}, align ${align} `);
+  // console.log(`Drew "${txt}" size ${size}, color ${color}, align ${align} `);
 }
 
 function drawLine(x, y, size, color, diff) {
@@ -173,12 +178,12 @@ function drawLine(x, y, size, color, diff) {
 
 function getTxtInfo() {
   const txt = document.querySelector('.txt').value;
-  console.log('txt: ', txt);
   const font = document.querySelector('.font').value;
-  console.log('font: ', font);
   const fontSize = document.querySelector('.font-size').value;
-  console.log('fontSize: ', fontSize);
-  return { txt, fontSize, font };
+
+  const color = document.querySelector('.color-selector').value;
+  gColor = color;
+  return { txt, fontSize, font, color };
 }
 
 function changeColor(color) {

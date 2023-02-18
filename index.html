@@ -30,7 +30,7 @@
 
         <!-- <form onsubmit="createLine(undefined,undefined,this.value)" class="txt-inputs-container"> -->
         <!-- <label for="txt">Enter a txt</label> -->
-        <input class="txt input-panel-cell full " oninput="drawTextOnInput(this.value)" type="text" name="txt" id="txt"
+        <input class="txt input-panel-cell full " oninput=" drawTextOnInput(this.value)" type="text" name="txt" id="txt"
           placeholder="txt" class="txt" />
         <button onclick="createLine(undefined,undefined,this.previousElementSibling.value)" class="btn-add-text">
           +</button>
@@ -41,7 +41,7 @@
           <option value="text">Text</option>
           <option value="line">Line</option>
         </select>
-        <input class="color-selector" type="color" oninput="changeColor(this.value)" />
+        <input class="color-selector" type="color" oninput="changeColor(this.value) " value="black" />
         <label for="font">Enter a font</label>
         <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="impact" />
         <label for="font-size">Enter a font size</label>
@@ -49,7 +49,6 @@
           class="font-size" value="16" />
         </form>
 
-        <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
 
         <button class="btn" onclick="onUploadImg()">Share</button>
 
@@ -58,6 +57,7 @@
         <button onclick="clearCanvas()">Clear</button>
         <!-- when click the link run downloadCanvas -->
         <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+        <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
       </section>
   </div>
   <div class="gallery-page" hidden>

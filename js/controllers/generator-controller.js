@@ -22,9 +22,11 @@ function renderTexts() {
   // !gCurrImg ? clearCanvas() : renderImg(gCurrImg);
   //prettier-ignore
   gMeme.lines.forEach((line, idx )=> {
-    console.log('line: ', line);
+    // console.log('line: ', line);
     let x = 175;
-    let y = idx * 50 + 50;
+    gCurrLineLat = idx * 50 + 50
+    let y = gCurrLineLat ;
+
     const { txt, size, align, color } = getLineInfo(idx);
     drawText(txt, x, y, size, color, 'impact', align);
   });
