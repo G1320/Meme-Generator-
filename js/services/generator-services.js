@@ -30,6 +30,7 @@ function createLine(x, y, align) {
   gMeme.selectedLineIdx++;
   renderTexts();
   document.querySelector('.txt').value = '';
+  renderSelectedLineIdx();
 }
 
 function getLineInfo(selectedLineIdx) {

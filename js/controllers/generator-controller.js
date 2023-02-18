@@ -1,9 +1,11 @@
 function onInit() {
   gElCanvas = document.querySelector('#my-canvas');
   gCtx = gElCanvas.getContext('2d');
+
   resizeCanvas();
   addListeners();
   renderTexts();
+  drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 16, 'white');
 }
 
 function renderCanvas() {
@@ -21,7 +23,6 @@ function renderTexts() {
     drawText(txt, lan, lat, size, color, font, align);
   });
   // setTimeout(() => {
-  drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 16, 'white');
   // }, 500);
 }
 

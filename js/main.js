@@ -21,7 +21,7 @@ function getTxtInfo() {
 function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', align) {
   const { color } = getTxtInfo();
   clearCanvas();
-  gCtx.lineWidth = 1;
+  gCtx.lineWidth = 0.1;
   gCtx.strokeStyle = 'black';
   gCtx.fillStyle = color;
   gCtx.font = `${size}px ${font}`;
@@ -44,15 +44,12 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20, font = 'impact', alig
 
 function drawText(txt, x = 175, y = 100, size = 20, color, font = 'impact', align) {
   gCtx.beginPath();
-  console.log(gMeme.lines);
-
-  gCtx.lineWidth = 1;
+  gCtx.lineWidth = 0.1;
   gCtx.strokeStyle = 'black';
   gCtx.fillStyle = color;
   gCtx.font = `${size}px ${font}`;
   gCtx.textAlign = 'center';
   gCtx.textBaseline = 'middle';
-  console.log('Drew');
   gCtx.fillText(txt, x, y); // Draws (fills) a given text at the given (x, y) position.
   gCtx.strokeText(txt, x, y); // Draws (strokes) a given text at the given (x, y) position.
 }
@@ -77,12 +74,20 @@ function moveLine(direction) {
 }
 
 function selectPrevLine() {
+  if (gMeme.selectedLineIdx === 0) return;
   gMeme.selectedLineIdx--;
-  drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 16, 'white');
+  renderSelectedLineIdx();
 }
 function selectNextLine() {
+  if (gMeme.selectedLineIdx === gMeme.lines.length) return;
   gMeme.selectedLineIdx++;
+  renderSelectedLineIdx();
+}
+
+function renderSelectedLineIdx() {
+  clearCanvas();
   drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 16, 'white');
+  renderTexts();
 }
 
 function deleteSelectedLine() {}
