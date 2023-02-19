@@ -39,8 +39,15 @@
         <input class="color-selector" type="color" oninput="onChangeColor(this.value) " value="purple" />
         <button onclick="onClickedMoveLine('left')" class="btn-move-line-Left">˂</button>
         <button onclick="onClickedMoveLine('right')" class="btn-move-line-right">˃</button>
-        <input onchange="onChangedFont()" class="font" type="text" name="font" id="font" placeholder="font" class="font"
-          value="Impact" />
+
+        <select onchange="onChangedFont(this.value)" class="font" type="text" name="font" id="font" name="fonts"
+          id="fonts">
+          <option value="Impact">Impact</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Ariel">Ariel</option>
+        </select>
+
+
         <input oninput="onChangedFontSize()" class="font-size " type="number" name="font-size" id="font-size"
           placeholder="font-size" class="font-size" value="22" />
         <button class="btn" onclick="onUploadImg()">Share</button>

@@ -74,8 +74,8 @@ function onChangedFontSize() {
   renderTexts();
 }
 
-function onChangedFont() {
-  changeLineFont();
+function onChangedFont(font) {
+  changeLineFont(font);
   clearCanvas();
   renderTexts();
 }
