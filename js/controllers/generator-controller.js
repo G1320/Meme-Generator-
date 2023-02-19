@@ -42,9 +42,9 @@ function clearTextInput() {
   document.querySelector('.txt').value = '';
 }
 
-function updateTextInput() {
+function updateTextInput(value) {
   const { txt } = getLineInfo(gMeme.selectedLineIdx);
-  document.querySelector('.txt').value = txt;
+  document.querySelector('.txt').value = value || txt;
 }
 
 function onClickedAddLine() {
@@ -87,4 +87,9 @@ function onChangeColor(color) {
   changeColor(color);
   updateLineColor();
   renderTexts();
+}
+
+function onAddEmoji(emoji) {
+  updateTextInput(emoji);
+  createLine();
 }

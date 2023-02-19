@@ -52,7 +52,7 @@
             <option value="Helvetica">Helvetica</option>
             <option value="Ariel">Ariel</option>
           </select>
-          <label for="fonts">Select Font</label>
+          <label for="fonts">Font</label>
 
         </div>
         <div class="font-size-container">
@@ -66,6 +66,11 @@
         <button onclick="clearCanvas(true)">Clear</button>
         <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
         <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+        <button onclick="onAddEmoji('😂')" class="emoji-btn">😂</button>
+        <button onclick="onAddEmoji('🥰')" class="emoji-btn">🥰</button>
+        <button onclick="onAddEmoji('🙃')" class="emoji-btn">🙃</button>
+        <button onclick="onAddEmoji('😇')" class="emoji-btn">😇</button>
+        <button onclick="onAddEmoji('😤')" class="emoji-btn">😤</button>
       </section>
 
   </div>

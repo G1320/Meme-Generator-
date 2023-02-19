@@ -2,7 +2,7 @@
   grid-template-columns: repeat(4, 1fr);
   border: 6px solid var(--color-dark-primary);
   width: 60vw;
-  max-height: 300px;
+  max-height: 380px;
 }
 
 .input-panel * {
@@ -27,11 +27,7 @@
   margin-block-start: 5px;
   width: 50px;
 }
-.font-size label {
-  max-height: 30px;
-  margin-block-start: 0px;
-  white-space: initial;
-}
+
 .font-container {
   width: 100px;
   height: 60px;
