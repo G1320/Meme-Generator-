@@ -32,8 +32,7 @@
         <input class="txt input-panel-cell full " oninput=" onDrawTextOnInput(this.value)" type="text" name="txt"
           id="txt" placeholder="txt" class="txt" />
 
-        <button onclick="onClickedAddLine(undefined,undefined,this.previousElementSibling.value)"
-          class="btn-add-text">+</button>
+        <button onclick="onClickedAddLine(this.previousElementSibling.value)" class="btn-add-text">+</button>
         <button onclick="onClickedMoveLine('up')" class="btn-move-line-up">˄</button>
         <button onclick="onClickedMoveLine('down')" class="btn-move-line-down">˅</button>
 

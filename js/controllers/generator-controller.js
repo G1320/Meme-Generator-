@@ -59,7 +59,9 @@ function clearTextInput() {
   document.querySelector('.txt').value = '';
 }
 
-function onClickedAddLine(x, y, txt) {
+function onClickedAddLine(txt) {
+  x = null;
+  y = null;
   createLine(x, y, txt);
 }
 
@@ -82,6 +84,6 @@ function onClickedSelectPrevLine() {
 function onChangeColor(color) {
   changeColor(color);
 }
-function onDrawTextOnInput(x, y, txt) {
-  drawTextOnInput(x, y, txt);
+function onDrawTextOnInput(txt) {
+  drawTextOnInput(txt);
 }
