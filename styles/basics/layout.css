@@ -39,7 +39,7 @@
 
 .main-content-container {
   margin: auto;
-  width: 60vw;
+  width: max-content;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }

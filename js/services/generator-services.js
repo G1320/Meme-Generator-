@@ -3,7 +3,7 @@ var gMeme = {
   selectedLineIdx: 0,
   lines: [
     {
-      txt: 'I sometimes eat Falafel',
+      txt: 'Your Text Here',
       size: 20,
       align: 'left',
       color: 'purple',

@@ -7,14 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Canvas</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 </head>
 
 <body onload="onInit()">
 
   <header class="main-header full main-layout">
-
     <section class="nav flex space-between align-center">
       <div class="logo">Meme Generator</div>
       <div type="button" class="toggle-menu" onclick="toggleMenu()"></div>
@@ -27,15 +25,6 @@
     </section>
   </header>
 
-
-
-  <!-- <nav class="main-menu main-nav  flex space-around align-center">
-    <h3>Meme Generator</h3>
-    <ul class="main-nav clean-list ">
-
-    </ul>
-  </nav> -->
-
   <div class="generator-page" hidden>
 
     <main class="main-content-container grid">
@@ -45,7 +34,6 @@
       </div>
 
       <section class="input-panel grid col-5 row-6">
-
         <input type="search" class="txt full " oninput="onChangedLineText()" type="text" name="txt" id="txt"
           placeholder="txt" class="txt" />
         <button onclick="onClickedAddLine()" class="btn-add-text">+</button>
@@ -63,7 +51,6 @@
           <option value="Helvetica">Helvetica</option>
           <option value="Ariel">Ariel</option>
         </select>
-
 
         <input oninput="onChangedFontSize()" class="font-size " type="number" name="font-size" id="font-size"
           placeholder="font-size" class="font-size" value="22" />
@@ -104,6 +91,7 @@
   <script src="js/services/upload-services.js"></script>
   <script src="js/controllers/gallery-controller.js"></script>
   <script src="js/controllers/generator-controller.js"></script>
+  <script src="js/controllers/drag-n-drop-controller.js"></script>
   <script src="js/main.js"></script>
 </body>
 
