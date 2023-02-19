@@ -19,27 +19,6 @@ function renderTexts() {
   });
 }
 
-function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
-  const { color, font } = getTxtInfo();
-  clearCanvas();
-  gCtx.lineWidth = 0.1;
-  gCtx.strokeStyle = 'black';
-  gCtx.fillStyle = color;
-  gCtx.font = `${size}px ${font}`;
-  gCtx.textAlign = 'center';
-  gCtx.textBaseline = 'middle';
-  gCtx.fillText(txt, x, 380);
-  gCtx.strokeText(txt, x, 380);
-
-  setTimeout(() => {
-    renderTexts();
-    setTimeout(() => {
-      clearCanvas();
-      renderTexts();
-    }, 2000);
-  }, 0.1);
-}
-
 function drawText(txt, x, y, size, color, font) {
   gCtx.beginPath();
   gCtx.lineWidth = 0.1;

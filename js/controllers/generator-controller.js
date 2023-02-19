@@ -32,9 +32,8 @@ function getTxtInfo() {
   const txt = document.querySelector('.txt').value;
   const font = document.querySelector('.font').value;
   const fontSize = document.querySelector('.font-size').value;
-
   const color = document.querySelector('.color-selector').value;
-  gColor = color;
+  changeColor(color);
   return { txt, fontSize, font, color };
 }
 
@@ -67,6 +66,11 @@ function onClickedAddLine(txt) {
 
 function onChangedFontSize(fontSize) {
   changeFontSize(fontSize);
+  clearCanvas();
+  renderTexts();
+}
+function onChangedLineText() {
+  changeLineText();
   clearCanvas();
   renderTexts();
 }
