@@ -43,6 +43,7 @@ function changeLineFontSize() {
 
   gMeme.lines[gMeme.selectedLineIdx].size = fontSize;
 }
+
 function changeLineFont() {
   const { font } = getTxtInfo();
 
@@ -57,6 +58,7 @@ function changeLineColor() {
 
 function changeLineText() {
   const { txt } = getTxtInfo();
+
   if (!txt) return;
   gMeme.lines[gMeme.selectedLineIdx].txt = txt;
 }

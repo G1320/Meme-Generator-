@@ -58,6 +58,11 @@ function clearTextInput() {
   document.querySelector('.txt').value = '';
 }
 
+function updateTextInput() {
+  const { txt } = getLineInfo(gMeme.selectedLineIdx);
+  document.querySelector('.txt').value = txt;
+}
+
 function onClickedAddLine(txt) {
   x = null;
   y = null;
@@ -87,10 +92,12 @@ function onClickedMoveLine(direction) {
 
 function onClickedSelectNextLine() {
   selectNextLine();
+  updateTextInput();
 }
 
 function onClickedSelectPrevLine() {
   selectPrevLine();
+  updateTextInput();
 }
 
 function onChangeColor(color) {
