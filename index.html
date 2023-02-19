@@ -10,14 +10,30 @@
 </head>
 
 <body onload="onInit()">
-  <nav class="main-menu main-nav  flex space-around align-center">
+
+  <header class="main-header full main-layout">
+
+    <section class="nav flex space-between align-center">
+      <div class="logo">Meme Generator</div>
+      <div type="button" class="toggle-menu" onclick="toggleMenu()"></div>
+      <nav class="main-nav clean-list">
+        <ul class="main-menu clean-list flex">
+          <a href="#" onclick="showClickedPage('gallery')" class="link-memes">Memes </a>
+          <a href="#" onclick="showClickedPage('generator')" class="link-generator">Generator </a>
+          <a href="#" onclick="showClickedPage('about')" class="link-about">About </a>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+
+
+  <!-- <nav class="main-menu main-nav  flex space-around align-center">
     <h3>Meme Generator</h3>
     <ul class="main-nav clean-list ">
-      <a href="#" onclick="showClickedPage('gallery')" class="link-memes">Memes</a>
-      <a href="#" onclick="showClickedPage('generator')" class="link-generator">Generator</a>
-      <a href="#" onclick="showClickedPage('about')" class="link-about">About</a>
+
     </ul>
-  </nav>
+  </nav> -->
 
   <div class="generator-page" hidden>
 
