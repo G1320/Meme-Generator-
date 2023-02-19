@@ -1,5 +1,3 @@
-const TOUCH_EVS = ['touchstart', 'touchmove', 'touchend'];
-
 let gElCanvas;
 let gCtx;
 let gColor;
@@ -36,7 +34,7 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
       clearCanvas();
       renderTexts();
     }, 2000);
-  }, 1);
+  }, 0.1);
 }
 
 function drawText(txt, x, y, size, color, font) {
