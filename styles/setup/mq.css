@@ -1,6 +1,6 @@
 @media screen and (max-width: 500px) {
   .canvas-container {
-    width: 80vw;
+    width: 500px;
     max-width: 500px;
     max-height: 500px;
   }
