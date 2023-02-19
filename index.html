@@ -32,20 +32,20 @@
         <input class="txt input-panel-cell full " oninput=" drawTextOnInput(this.value)" type="text" name="txt" id="txt"
           placeholder="txt" class="txt" />
 
-        <button onclick="createLine(undefined,undefined,this.previousElementSibling.value)"
+        <button onclick="onClickedAddLine(undefined,undefined,this.previousElementSibling.value)"
           class="btn-add-text">+</button>
-        <button onclick="moveLine('up')" class="btn-move-line-up">˄</button>
-        <button onclick="moveLine('down')" class="btn-move-line-down">˅</button>
+        <button onclick="onClickedMoveLine('up')" class="btn-move-line-up">˄</button>
+        <button onclick="onClickedMoveLine('down')" class="btn-move-line-down">˅</button>
 
-        <button onclick="selectPrevLine()" class="btn-select-prev-line">Select Prev</button>
-        <button onclick="selectNextLine()" class="btn-select-next-line">Select Next</button>
+        <button onclick="onClickedSelectPrevLine()" class="btn-select-prev-line">Select Prev</button>
+        <button onclick="onClickedSelectNextLine()" class="btn-select-next-line">Select Next</button>
 
-        <input class="color-selector" type="color" oninput="changeColor(this.value) " value="black" />
-        <button onclick="moveLine('left')" class="btn-move-line-Left">˂</button>
-        <button onclick="moveLine('right')" class="btn-move-line-right">˃</button>
+        <input class="color-selector" type="color" oninput="onChangeColor(this.value) " value="black" />
+        <button onclick="onClickedMoveLine('left')" class="btn-move-line-Left">˂</button>
+        <button onclick="onClickedMoveLine('right')" class="btn-move-line-right">˃</button>
         <input class="font" type="text" name="font" id="font" placeholder="font" class="font" value="Impact" />
-        <input class="font-size " type="number" name="font-size" id="font-size" placeholder="font-size"
-          class="font-size" value="16" />
+        <input oninput="onChangedFontSize(this.value)" class="font-size " type="number" name="font-size" id="font-size"
+          placeholder="font-size" class="font-size" value="22" />
         </form>
 
         <button class="btn" onclick="onUploadImg()">Share</button>

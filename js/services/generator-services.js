@@ -29,7 +29,7 @@ function createLine() {
   });
   gMeme.selectedLineIdx++;
   renderTexts();
-  document.querySelector('.txt').value = '';
+  clearTextInput();
   renderSelectedLineIdx();
 }
 
@@ -37,4 +37,8 @@ function getLineInfo(selectedLineIdx) {
   if (!gMeme.lines.length) return;
   const { lat, lan, txt, size, align, color, font } = gMeme.lines[selectedLineIdx];
   return { lat, lan, txt, size, align, color, font };
+}
+
+function changeFontSize(fontSize) {
+  gMeme.lines[gMeme.selectedLineIdx].size = fontSize;
 }

@@ -3,16 +3,6 @@ let gCtx;
 let gColor;
 let gCurrImg;
 
-function getTxtInfo() {
-  const txt = document.querySelector('.txt').value;
-  const font = document.querySelector('.font').value;
-  const fontSize = document.querySelector('.font-size').value;
-
-  const color = document.querySelector('.color-selector').value;
-  gColor = color;
-  return { txt, fontSize, font, color };
-}
-
 function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
   const { color, font } = getTxtInfo();
   clearCanvas();
@@ -23,11 +13,9 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
   gCtx.textAlign = 'center';
   gCtx.textBaseline = 'middle';
 
-  gCtx.fillText(txt, x, 380); // Draws (fills) a given text at the given (x, y) position.
+  gCtx.fillText(txt, x, 380);
   gCtx.strokeText(txt, x, 380);
-  gCtx.lineWidth = 3;
-  gCtx.fill();
-  gCtx.stroke();
+
   setTimeout(() => {
     renderTexts();
     setTimeout(() => {
@@ -45,8 +33,8 @@ function drawText(txt, x, y, size, color, font) {
   gCtx.font = `${size}px ${font}`;
   gCtx.textAlign = 'center';
   gCtx.textBaseline = 'middle';
-  gCtx.fillText(txt, x, y); // Draws (fills) a given text at the given (x, y) position.
-  gCtx.strokeText(txt, x, y); // Draws (strokes) a given text at the given (x, y) position.
+  gCtx.fillText(txt, x, y);
+  gCtx.strokeText(txt, x, y);
 }
 
 function moveLine(direction) {
@@ -111,25 +99,4 @@ function renderImg(img) {
   // Draw the img on the canvas
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
   renderTexts();
-}
-
-function showClickedPage(pageName) {
-  let generatorPage = document.querySelector('.generator-page');
-  let galleryPage = document.querySelector('.gallery-page');
-  let aboutPage = document.querySelector('.about-page');
-  generatorPage.hidden = true;
-  galleryPage.hidden = true;
-  aboutPage.hidden = true;
-
-  switch (pageName) {
-    case 'generator':
-      generatorPage.hidden = false;
-      break;
-    case 'gallery':
-      galleryPage.hidden = false;
-      break;
-    case 'about':
-      aboutPage.hidden = false;
-      break;
-  }
 }
