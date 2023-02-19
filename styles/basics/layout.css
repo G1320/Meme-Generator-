@@ -17,6 +17,20 @@
   border-radius: 6px;
 }
 
+.gallery-container {
+  margin: 5px;
+  gap: 10px;
+}
+
+.gallery-container * {
+  border-radius: 6px;
+  transition: 80ms;
+}
+.gallery-container *:hover {
+  border-radius: 6px;
+  border: 5px solid var(--color-dark-primary);
+}
+
 .main-content-container {
   margin: auto;
   width: 60vw;

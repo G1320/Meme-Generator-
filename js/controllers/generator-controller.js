@@ -6,6 +6,22 @@ function onInit() {
   addListeners();
   renderTexts();
   updateTextInput();
+  renderGalleryImgs();
+}
+
+function renderGalleryImgs() {
+  // var books = getBooks()
+  const imgs = getImgs();
+  console.log(imgs);
+
+  var strHtmls = imgs.map(
+    (img, idx) => `
+    
+    <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/${img.url}" alt="">
+        `
+  );
+
+  document.querySelector('.gallery-container').innerHTML = strHtmls.join('');
 }
 
 function showClickedPage(pageName) {
