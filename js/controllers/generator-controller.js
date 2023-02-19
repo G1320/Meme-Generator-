@@ -69,6 +69,7 @@ function onChangedFontSize(fontSize) {
   clearCanvas();
   renderTexts();
 }
+
 function onChangedLineText() {
   changeLineText();
   clearCanvas();
@@ -78,9 +79,11 @@ function onChangedLineText() {
 function onClickedMoveLine(direction) {
   moveLine(direction);
 }
+
 function onClickedSelectNextLine() {
   selectNextLine();
 }
+
 function onClickedSelectPrevLine() {
   selectPrevLine();
 }
@@ -88,4 +91,5 @@ function onClickedSelectPrevLine() {
 function onChangeColor(color) {
   changeColor(color);
   changeLineColor();
+  renderTexts();
 }
