@@ -28,6 +28,10 @@
   width: 50px;
 }
 
+.emoji-btn {
+  font-size: 1.3em !important;
+}
+
 .font-container {
   width: 100px;
   height: 60px;

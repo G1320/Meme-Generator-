@@ -57,8 +57,7 @@ function updateLineColor() {
 }
 
 function updateLineTxt() {
-  const { txt } = getTxtInfo();
-
+  let { txt } = getTxtInfo();
   if (!txt) return;
   gMeme.lines[gMeme.selectedLineIdx].txt = txt;
 }
