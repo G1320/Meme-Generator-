@@ -5,6 +5,7 @@ function onInit() {
   resizeCanvas();
   addListeners();
   renderTexts();
+  updateTextInput();
 }
 
 function showClickedPage(pageName) {
@@ -50,10 +51,6 @@ function addListeners() {
   });
 }
 
-function onSelectShape(shape) {
-  setShape(shape);
-}
-
 function clearTextInput() {
   document.querySelector('.txt').value = '';
 }
@@ -74,6 +71,7 @@ function onChangedFontSize() {
   clearCanvas();
   renderTexts();
 }
+
 function onChangedFont() {
   changeLineFont();
   clearCanvas();
