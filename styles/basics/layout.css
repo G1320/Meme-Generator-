@@ -16,13 +16,13 @@
   max-width: 450px;
   min-width: 410px;
   display: grid;
-  gap: 4px;
+  gap: px;
   border-radius: 6px;
 }
 
 .gallery-container {
   width: 90vw;
-  border: 6px solid var(--color-grey-primary);
+  border: 6px solid aliceblue;
   border-radius: 6px;
   margin: auto;
   padding: 10px;

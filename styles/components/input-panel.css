@@ -1,6 +1,7 @@
 .input-panel {
   grid-template-columns: repeat(4, 1fr);
   border: 6px solid aliceblue;
+  background-color: rgba(211, 211, 211, 0.623);
   width: 60vw;
   max-height: 320px;
 }
@@ -8,22 +9,29 @@
 .input-panel * {
   margin: 2px;
   text-align: center;
+  margin-block-end: 6px;
 }
 .input-panel *:hover {
   background-color: var(--color-selected) !important;
 }
 
 .input-panel
-  *:not(:first-child):not(.color-selector):not(.file-input):not(.font-size):not(.font-container) {
+  *:not(:first-child):not(.color-selector):not(.file-input):not(.font-size):not(.font-container):not(
+    label
+  ) {
   place-self: center;
   font-size: 0.8rem;
   width: 100px;
   height: 60px;
   max-width: 60px;
-  border: var(wall-border);
+  border: 3px solid rgba(255, 255, 255, 0.615) !important;
   background-color: var(--color-grey-primary);
   color: black;
   border-radius: var(--br-m);
+}
+
+.font-container-label {
+  color: black;
 }
 
 .font-size {
