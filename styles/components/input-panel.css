@@ -1,6 +1,6 @@
 .input-panel {
   grid-template-columns: repeat(4, 1fr);
-  border: 6px solid var(--color-grey-primary);
+  border: 6px solid aliceblue;
   width: 60vw;
   max-height: 320px;
 }
