@@ -2,8 +2,8 @@ function onInit() {
   gElCanvas = document.querySelector('#my-canvas');
   gCtx = gElCanvas.getContext('2d');
 
-  resizeCanvas();
-  addListeners();
+  // resizeCanvas();
+  // addListeners();
   renderTexts();
   updateTextInput();
   renderGalleryImgs();
@@ -15,8 +15,7 @@ function renderGalleryImgs() {
   console.log(imgs);
 
   var strHtmls = imgs.map(
-    (img, idx) => `
-    
+    (img) => `
     <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/${img.url}" alt="">
         `
   );

@@ -10,16 +10,16 @@
 </head>
 
 <body onload="onInit()">
-  <nav class="main-menu flex space-around align-center">
+  <nav class="main-menu main-nav  flex space-around align-center">
     <h3>Meme Generator</h3>
-    <ul class="main-menu-nav clean-list ">
+    <ul class="main-nav clean-list ">
       <a href="#" onclick="showClickedPage('gallery')" class="link-memes">Memes</a>
       <a href="#" onclick="showClickedPage('generator')" class="link-generator">Generator</a>
       <a href="#" onclick="showClickedPage('about')" class="link-about">About</a>
     </ul>
   </nav>
 
-  <div class="generator-page">
+  <div class="generator-page" hidden>
 
     <main class="main-content-container grid">
       <div class="canvas-container">
@@ -58,7 +58,7 @@
       </section>
 
   </div>
-  <div class="gallery-page" hidden>
+  <div class="gallery-page">
     <div class="gallery-container grid col-4">
       <!-- <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/1.jpg" alt="">
       <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/2.jpg" alt="">

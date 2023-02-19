@@ -23,3 +23,9 @@ var gImgs = [
 function getImgs() {
   return gImgs;
 }
+
+function createKeywordMap(keywords) {
+  return gKeywordSearchCountMap.map((keyword) => {
+    !wordsMap.includes(keyword) ? (wordsMap[keyword] = 1) : -1;
+  });
+}
