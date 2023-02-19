@@ -28,7 +28,6 @@ function showClickedPage(pageName) {
   }
 }
 
-
 function getTxtInfo() {
   const txt = document.querySelector('.txt').value;
   const font = document.querySelector('.font').value;
@@ -82,4 +81,7 @@ function onClickedSelectPrevLine() {
 
 function onChangeColor(color) {
   changeColor(color);
+}
+function onDrawTextOnInput(x, y, txt) {
+  drawTextOnInput(x, y, txt);
 }
