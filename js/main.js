@@ -98,6 +98,7 @@ function clearCanvas(isCalledViaElBtn) {
       gMeme.selectedLineIdx = -1;
     } else {
       gMeme.lines.pop();
+      gMeme.selectedLineIdx--;
     }
   }
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
