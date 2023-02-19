@@ -1,3 +1,8 @@
+.main-menu {
+  background-color: var(--color-dark-primary);
+  margin-block-end: 3em;
+}
+
 ul .main-menu {
   height: 160px;
   align-items: center;
@@ -7,10 +12,11 @@ ul .main-menu {
 .main-menu a {
   height: 100%;
   /* border: 1px solid red; */
+  color: white;
 }
 
 h3 {
   font-size: 3em;
   /* margin-block: 15px; */
-  color: var(--color-dark-primary);
+  color: white;
 }

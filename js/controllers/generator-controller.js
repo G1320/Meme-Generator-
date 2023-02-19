@@ -60,10 +60,10 @@ function updateTextInput() {
   document.querySelector('.txt').value = txt;
 }
 
-function onClickedAddLine(txt) {
-  x = null;
-  y = null;
-  createLine(x, y, txt);
+function onClickedAddLine() {
+  let x = null;
+  let y = null;
+  createLine(x, y);
 }
 
 function onChangedFontSize() {

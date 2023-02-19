@@ -6,7 +6,7 @@ var gMeme = {
       txt: 'I sometimes eat Falafel',
       size: 20,
       align: 'left',
-      color: 'red',
+      color: 'purple',
       font: 'Impact',
       lat: 50,
       lan: 200,
@@ -41,12 +41,14 @@ function getLineInfo(selectedLineIdx) {
 function changeLineFontSize() {
   const { fontSize } = getTxtInfo();
 
+  if (!fontSize) return;
   gMeme.lines[gMeme.selectedLineIdx].size = fontSize;
 }
 
 function changeLineFont() {
   const { font } = getTxtInfo();
 
+  if (font.length < 4) return;
   gMeme.lines[gMeme.selectedLineIdx].font = font;
 }
 
