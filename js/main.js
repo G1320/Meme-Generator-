@@ -3,6 +3,22 @@ let gCtx;
 let gColor;
 let gCurrImg;
 
+function renderCanvas() {
+  //Set the background color to grey
+  gCtx.fillStyle = '#ede5ff59';
+  //Clear the canvas,  fill it with grey background
+  gCtx.fillRect(0, 0, gElCanvas.width, gElCanvas.height);
+  renderCircle();
+}
+
+function renderTexts() {
+  //prettier-ignore
+  gMeme.lines.forEach((line, idx )=> {
+    const {lat, lan, txt, size, align, color, font } = getLineInfo(idx);
+    drawText(txt, lan, lat, size, color, font, align);
+  });
+}
+
 function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
   const { color, font } = getTxtInfo();
   clearCanvas();
@@ -12,7 +28,6 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
   gCtx.font = `${size}px ${font}`;
   gCtx.textAlign = 'center';
   gCtx.textBaseline = 'middle';
-
   gCtx.fillText(txt, x, 380);
   gCtx.strokeText(txt, x, 380);
 

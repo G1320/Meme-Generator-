@@ -28,21 +28,6 @@ function showClickedPage(pageName) {
   }
 }
 
-function renderCanvas() {
-  //Set the background color to grey
-  gCtx.fillStyle = '#ede5ff59';
-  //Clear the canvas,  fill it with grey background
-  gCtx.fillRect(0, 0, gElCanvas.width, gElCanvas.height);
-  renderCircle();
-}
-
-function renderTexts() {
-  //prettier-ignore
-  gMeme.lines.forEach((line, idx )=> {
-    const {lat, lan, txt, size, align, color, font } = getLineInfo(idx);
-    drawText(txt, lan, lat, size, color, font, align);
-  });
-}
 
 function getTxtInfo() {
   const txt = document.querySelector('.txt').value;

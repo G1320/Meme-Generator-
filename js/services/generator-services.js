@@ -35,8 +35,7 @@ function createLine() {
 
 function getLineInfo(selectedLineIdx) {
   if (!gMeme.lines.length) return;
-  const { lat, lan, txt, size, align, color, font } = gMeme.lines[selectedLineIdx];
-  return { lat, lan, txt, size, align, color, font };
+  return gMeme.lines[selectedLineIdx];
 }
 
 function changeFontSize(fontSize) {
