@@ -43,8 +43,8 @@ function clearTextInput() {
 }
 
 function updateTextInput(value) {
-  const { txt } = getLineInfo(gMeme.selectedLineIdx);
-  document.querySelector('.txt').value = value || txt;
+  const line = getLineInfo(gMeme.selectedLineIdx);
+  document.querySelector('.txt').value = value || line.txt;
 }
 
 function onClickedAddLine() {

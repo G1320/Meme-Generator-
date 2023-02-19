@@ -27,14 +27,14 @@ function createLine() {
     lat: gMeme.lines.length * 50 + 50,
     lan: gElCanvas.width / 2,
   });
-  gMeme.selectedLineIdx++;
+  gMeme.selectedLineIdx = gMeme.lines.length - 1;
   renderTexts();
   clearTextInput();
   renderSelectedLineIdx();
 }
 
 function getLineInfo(selectedLineIdx) {
-  if (!gMeme.lines.length) return;
+  if (!gMeme.lines.length) return null;
   return gMeme.lines[selectedLineIdx];
 }
 
