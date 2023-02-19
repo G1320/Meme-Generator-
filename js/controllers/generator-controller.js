@@ -65,7 +65,7 @@ function onClickedAddLine(txt) {
 }
 
 function onChangedFontSize(fontSize) {
-  changeFontSize(fontSize);
+  changeLineFontSize(fontSize);
   clearCanvas();
   renderTexts();
 }
@@ -87,7 +87,5 @@ function onClickedSelectPrevLine() {
 
 function onChangeColor(color) {
   changeColor(color);
-}
-function onDrawTextOnInput(txt) {
-  drawTextOnInput(txt);
+  changeLineColor();
 }
