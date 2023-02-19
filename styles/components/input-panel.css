@@ -18,7 +18,7 @@
 .input-panel
   *:not(:first-child):not(.color-selector):not(.file-input):not(.font-size):not(.font-container):not(
     label
-  ) {
+  ):not(.font-container-label) {
   place-self: center;
   font-size: 0.8rem;
   width: 100px;
@@ -30,12 +30,18 @@
   border-radius: var(--br-m);
 }
 
+.input-panel a {
+  padding-top: 16px;
+}
+
 .font-container-label {
+  padding-top: 100px;
+  font-size: 0.9em;
   color: black;
 }
 
 .font-size {
-  margin-block-start: 5px;
+  margin-block-start: 6px;
   width: 50px;
 }
 
@@ -60,7 +66,7 @@
 
 input[type='file'] {
   margin: auto;
-  margin-top: 4px;
+  margin-top: 5px;
   width: 60px;
   font-size: 0.6rem;
   white-space: inherit;
@@ -72,7 +78,6 @@ input[type='file'] {
   height: 60px;
   max-width: 60px;
   border: var(wall-border);
-  background-color: aliceblue;
-  color: aliceblue;
+  background-color: var(--color-grey-primary);
   border-radius: var(--br-m);
 }
