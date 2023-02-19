@@ -14,8 +14,9 @@
 .input-panel {
   margin: auto;
   max-width: 450px;
+  min-width: 410px;
   display: grid;
-  gap: 10px;
+  gap: 4px;
   border-radius: 6px;
 }
 

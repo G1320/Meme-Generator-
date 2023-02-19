@@ -2,13 +2,12 @@
   grid-template-columns: repeat(4, 1fr);
   border: 6px solid var(--color-grey-primary);
   width: 60vw;
-  max-height: 380px;
+  max-height: 320px;
 }
 
 .input-panel * {
-  margin: 6px;
+  margin: 2px;
   text-align: center;
-  transition: 80ms;
 }
 .input-panel *:hover {
   background-color: var(--color-selected) !important;
@@ -43,6 +42,7 @@
   border: var(wall-border);
   background-color: var(--color-grey-primary);
   border-radius: var(--br-m);
+  margin: auto;
 }
 
 .font-container select {
@@ -51,6 +51,8 @@
 }
 
 input[type='file'] {
+  margin: auto;
+  margin-top: 4px;
   width: 60px;
   font-size: 0.6rem;
   white-space: inherit;
