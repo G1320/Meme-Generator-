@@ -21,7 +21,7 @@ function createLine() {
   gMeme.lines.push({
     txt,
     size,
-    align: align || 'center',
+    align: 'center',
     color: color,
     font,
     lat: gMeme.lines.length * 50 + 50,
