@@ -6,7 +6,7 @@ var gMeme = {
       txt: 'Your Text Here',
       size: 20,
       align: 'left',
-      color: 'purple',
+      color: '#e07575',
       font: 'Impact',
       lat: 50,
       lan: 200,

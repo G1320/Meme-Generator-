@@ -21,7 +21,7 @@
 
 .gallery-container {
   width: 90vw;
-  border: 6px solid var(--color-dark-primary);
+  border: 6px solid var(--wall-bg-color);
   border-radius: 6px;
   margin: auto;
   padding: 10px;
@@ -34,7 +34,7 @@
 }
 .gallery-container *:hover {
   border-radius: 6px;
-  border: 5px solid var(--color-dark-primary);
+  border: 5px solid var(--wall-bg-color);
 }
 
 .main-content-container {

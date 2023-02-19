@@ -13,7 +13,7 @@
   height: 100%;
   position: relative;
   background-color: var(--clr4);
-  color: var(--clr0);
+  color: aliceblue;
   z-index: 1;
   box-shadow: inset 0px -6px 0 var(--clr6);
   margin-block-end: 30px;

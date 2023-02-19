@@ -11,7 +11,10 @@
 </head>
 
 <body onload="onInit()">
-
+  <div class="background-container">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+  </div>
   <header class="main-header full main-layout">
     <section class="nav flex space-between align-center">
       <div class="logo">MemeGenerator</div>
@@ -30,7 +33,7 @@
     <main class="main-content-container grid">
       <div class="canvas-container">
         <canvas id="my-canvas" width="398" height="398"
-          style="border: 6px solid rgb(53, 0, 128); border-radius: 6px; margin: auto;"></canvas>
+          style="border: 6px solid var(--wall-bg-color); border-radius: 6px; margin: auto;"></canvas>
       </div>
 
       <section class="input-panel grid col-5 row-6">
@@ -41,7 +44,7 @@
         <button onclick="onClickedMoveLine('down')" class="btn-move-line-down">˅</button>
         <button onclick="onClickedSelectNextLine()" class="btn-select-next-line">Select Next</button>
         <button onclick="onClickedSelectPrevLine()" class="btn-select-prev-line">Select Prev</button>
-        <input class="color-selector" type="color" oninput="onChangeColor(this.value) " value="purple" />
+        <input class="color-selector" type="color" oninput="onChangeColor(this.value) " value="#e07575" />
         <button onclick="onClickedMoveLine('left')" class="btn-move-line-Left">˂</button>
         <button onclick="onClickedMoveLine('right')" class="btn-move-line-right">˃</button>
 

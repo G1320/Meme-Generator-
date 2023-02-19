@@ -9,14 +9,14 @@
   --cell-size: 30px;
   --cell-content-size: 20px;
 
-  --wall-bg-color: rgba(211, 211, 211, 0.439);
+  --wall-bg-color: rgba(211, 211, 211, 0.96);
   --wall-border: 2px solid rgba(255, 255, 255, 0.509);
 
-  --color-dark-primary: rgb(39, 0, 94);
+  --color-dark-primary: #27005e;
   --color-dark-secondary: rgba(40, 14, 87, 0.958);
   --color-light-primary: rgb(67, 31, 139);
   --color-light-secondary: rgba(67, 31, 139, 0.58);
-  --color-selected: rgb(224, 117, 117);
+  --color-selected: #e07575;
 
   --clr2: #ffffff;
   --clr1: #626262;
