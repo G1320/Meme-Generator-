@@ -8,6 +8,10 @@
 .input-panel * {
   margin: 6px;
   text-align: center;
+  transition: 80ms;
+}
+.input-panel *:hover {
+  background-color: var(--color-selected) !important;
 }
 
 .input-panel
