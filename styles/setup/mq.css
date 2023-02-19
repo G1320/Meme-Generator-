@@ -7,6 +7,9 @@
 } */
 
 @media (max-width: 930px) {
+  /* .main-menu a {
+    margin-block-end: 60px;
+  } */
   .gallery-container {
     max-width: 80vw;
   }

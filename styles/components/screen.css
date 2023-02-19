@@ -2,10 +2,15 @@ body {
   margin: 0px;
   padding: 0px;
   /* display: flex; */
-  cursor: grab;
+  /* cursor: grab; */
   background-color: #f7f7f959;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   justify-content: flex-start;
+}
+
+button,
+a {
+  cursor: pointer;
 }
