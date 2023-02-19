@@ -14,7 +14,7 @@ var gMeme = {
   ],
 };
 
-function createLine(x, y, align) {
+function createLine() {
   const { txt, fontSize: size, color, font } = getTxtInfo();
 
   if (!txt) return;

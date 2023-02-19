@@ -39,7 +39,7 @@ function drawTextOnInput(txt, x = 200, y = 100, size = 20) {
   }, 1);
 }
 
-function drawText(txt, x, y, size, color, font, align) {
+function drawText(txt, x, y, size, color, font) {
   gCtx.beginPath();
   gCtx.lineWidth = 0.1;
   gCtx.strokeStyle = 'black';
@@ -76,6 +76,7 @@ function selectPrevLine() {
   gMeme.selectedLineIdx--;
   renderSelectedLineIdx();
 }
+
 function selectNextLine() {
   if (gMeme.selectedLineIdx === gMeme.lines.length - 1) return;
   gMeme.selectedLineIdx++;
@@ -98,9 +99,7 @@ function clearCanvas(isCalledViaElBtn) {
       gMeme.lines = [];
       gMeme.selectedLineIdx = -1;
     } else {
-      console.log(' gMeme.lines: ', gMeme.lines);
       gMeme.lines.pop();
-      console.log(' gMeme.lines: ', gMeme.lines);
     }
   }
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);
