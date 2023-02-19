@@ -5,6 +5,8 @@
 }
 
 .canvas-container {
+  box-sizing: border-box;
+
   width: 100%;
   height: 100%;
 }
@@ -18,7 +20,7 @@
 }
 
 .gallery-container {
-  margin: 5px;
+  margin: 10px;
   gap: 10px;
 }
 

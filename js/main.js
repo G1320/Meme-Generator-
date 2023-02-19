@@ -1,7 +1,10 @@
+const TOUCH_EVS = ['touchstart', 'touchmove', 'touchend'];
+
 let gElCanvas;
 let gCtx;
 let gColor;
 let gCurrImg;
+let gIsDrag;
 
 function renderCanvas() {
   //Set the background color to grey

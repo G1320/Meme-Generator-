@@ -1,13 +1,16 @@
 .main-menu {
   background-color: var(--color-dark-primary);
+  height: 100%;
 }
 
 .main-menu a {
-  margin: 20px;
+  margin-inline-start: 20px;
+  height: 100%;
   color: white;
 }
 
 .main-header {
+  height: 100%;
   position: relative;
   background-color: var(--clr4);
   color: var(--clr0);
@@ -24,7 +27,7 @@
 
 .main-header .main-nav a {
   width: var(--nav-height);
-  height: var(--nav-height);
+  height: 100%;
   align-items: center;
   justify-content: center;
 
