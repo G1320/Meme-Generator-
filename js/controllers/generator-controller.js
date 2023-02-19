@@ -64,8 +64,13 @@ function onClickedAddLine(txt) {
   createLine(x, y, txt);
 }
 
-function onChangedFontSize(fontSize) {
-  changeLineFontSize(fontSize);
+function onChangedFontSize() {
+  changeLineFontSize();
+  clearCanvas();
+  renderTexts();
+}
+function onChangedFont() {
+  changeLineFont();
   clearCanvas();
   renderTexts();
 }

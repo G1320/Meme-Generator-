@@ -38,9 +38,17 @@ function getLineInfo(selectedLineIdx) {
   return gMeme.lines[selectedLineIdx];
 }
 
-function changeLineFontSize(fontSize) {
+function changeLineFontSize() {
+  const { fontSize } = getTxtInfo();
+
   gMeme.lines[gMeme.selectedLineIdx].size = fontSize;
 }
+function changeLineFont() {
+  const { font } = getTxtInfo();
+
+  gMeme.lines[gMeme.selectedLineIdx].font = font;
+}
+
 function changeLineColor() {
   const { color } = getTxtInfo();
 
