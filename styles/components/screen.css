@@ -12,6 +12,7 @@ body {
 
 button,
 .color-selector,
-a {
+a,
+img {
   cursor: pointer;
 }
