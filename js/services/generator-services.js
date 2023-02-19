@@ -38,27 +38,25 @@ function getLineInfo(selectedLineIdx) {
   return gMeme.lines[selectedLineIdx];
 }
 
-function changeLineFontSize() {
+function updateLineFontSize() {
   const { fontSize } = getTxtInfo();
 
   if (!fontSize) return;
   gMeme.lines[gMeme.selectedLineIdx].size = fontSize;
 }
 
-function changeLineFont(font) {
-  // const { font } = getTxtInfo();
-
-  if (font.length < 4) return;
+function updateLineFont(font) {
+  if (!font) return;
   gMeme.lines[gMeme.selectedLineIdx].font = font;
 }
 
-function changeLineColor() {
+function updateLineColor() {
   const { color } = getTxtInfo();
 
   gMeme.lines[gMeme.selectedLineIdx].color = color;
 }
 
-function changeLineText() {
+function updateLineTxt() {
   const { txt } = getTxtInfo();
 
   if (!txt) return;

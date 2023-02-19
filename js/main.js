@@ -68,7 +68,7 @@ function selectNextLine() {
 
 function renderSelectedLineIdx() {
   clearCanvas();
-  drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 380, 380, 20, gColor);
+  drawText('Line ' + (gMeme.selectedLineIdx + 1).toString(), 365, 380, 20, gColor);
   renderTexts();
 }
 

@@ -2,7 +2,6 @@ function onInit() {
   gElCanvas = document.querySelector('#my-canvas');
   gCtx = gElCanvas.getContext('2d');
 
-  // resizeCanvas();
   addListeners();
   renderTexts();
   updateTextInput();
@@ -39,29 +38,6 @@ function getTxtInfo() {
   return { txt, fontSize, font, color };
 }
 
-function resizeCanvas() {
-  const elContainer = document.querySelector('.canvas-container');
-  gElCanvas.width = elContainer.offsetWidth;
-  gElCanvas.height = elContainer.offsetHeight;
-}
-
-function addListeners() {
-  addMouseListeners();
-  addTouchListeners();
-}
-
-function addMouseListeners() {
-  gElCanvas.addEventListener('mousedown', onDown);
-  gElCanvas.addEventListener('mousemove', onMove);
-  gElCanvas.addEventListener('mouseup', onUp);
-}
-
-function addTouchListeners() {
-  gElCanvas.addEventListener('touchstart', onDown);
-  gElCanvas.addEventListener('touchmove', onMove);
-  gElCanvas.addEventListener('touchend', onUp);
-}
-
 function clearTextInput() {
   document.querySelector('.txt').value = '';
 }
@@ -72,25 +48,23 @@ function updateTextInput() {
 }
 
 function onClickedAddLine() {
-  let x = null;
-  let y = null;
-  createLine(x, y);
+  createLine();
 }
 
 function onChangedFontSize() {
-  changeLineFontSize();
+  updateLineFontSize();
   clearCanvas();
   renderTexts();
 }
 
 function onChangedFont(font) {
-  changeLineFont(font);
+  updateLineFont(font);
   clearCanvas();
   renderTexts();
 }
 
 function onChangedLineText() {
-  changeLineText();
+  updateLineTxt();
   clearCanvas();
   renderTexts();
 }
@@ -111,6 +85,6 @@ function onClickedSelectPrevLine() {
 
 function onChangeColor(color) {
   changeColor(color);
-  changeLineColor();
+  updateLineColor();
   renderTexts();
 }
