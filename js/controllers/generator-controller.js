@@ -9,20 +9,6 @@ function onInit() {
   renderGalleryImgs();
 }
 
-function renderGalleryImgs() {
-  // var books = getBooks()
-  const imgs = getImgs();
-  console.log(imgs);
-
-  var strHtmls = imgs.map(
-    (img) => `
-    <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/${img.url}" alt="">
-        `
-  );
-
-  document.querySelector('.gallery-container').innerHTML = strHtmls.join('');
-}
-
 function showClickedPage(pageName) {
   let generatorPage = document.querySelector('.generator-page');
   let galleryPage = document.querySelector('.gallery-page');

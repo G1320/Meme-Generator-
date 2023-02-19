@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Canvas</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 
 <body onload="onInit()">
@@ -18,7 +20,7 @@
       <div type="button" class="toggle-menu" onclick="toggleMenu()"></div>
       <nav class="main-nav clean-list">
         <ul class="main-menu clean-list flex">
-          <a href="#" onclick="showClickedPage('gallery')" class="link-memes">Memes </a>
+          <a href="#" onclick="showClickedPage('gallery')" class="link-memes">Gallery </a>
           <a href="#" onclick="showClickedPage('about')" class="link-about">About </a>
         </ul>
       </nav>
@@ -75,24 +77,6 @@
   </div>
   <div class="gallery-page">
     <div class="gallery-container grid col-4">
-      <!-- <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/1.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/2.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/3.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/4.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/5.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/6.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/7.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/8.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/9.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/10.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/11.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/12.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/13.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/14.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/15.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/16.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/17.jpg" alt="">
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/18.jpg" alt=""> -->
     </div>
   </div>
 
@@ -118,8 +102,8 @@
   <script src="js/services/generator-services.js"></script>
   <script src="js/services/gallery-services.js"></script>
   <script src="js/services/upload-services.js"></script>
-  <script src="js/controllers/generator-controller.js"></script>
   <script src="js/controllers/gallery-controller.js"></script>
+  <script src="js/controllers/generator-controller.js"></script>
   <script src="js/main.js"></script>
 </body>
 

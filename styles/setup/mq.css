@@ -7,6 +7,9 @@
 } */
 
 @media (max-width: 930px) {
+  .gallery-container {
+    max-width: 80vw;
+  }
   .main-content-container {
     grid-template-columns: repeat(1, 1fr);
     width: 400px;
