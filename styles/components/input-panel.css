@@ -10,7 +10,8 @@
   text-align: center;
 }
 
-.input-panel *:not(:first-child):not(.color-selector):not(.file-input) {
+.input-panel
+  *:not(:first-child):not(.color-selector):not(.file-input):not(.font-size):not(.font-container) {
   place-self: center;
   font-size: 0.8rem;
   width: 100px;
@@ -20,6 +21,29 @@
   background-color: var(--color-dark-primary);
   color: aliceblue;
   border-radius: var(--br-m);
+}
+
+.font-size {
+  margin-block-start: 5px;
+  width: 50px;
+}
+.font-size label {
+  max-height: 30px;
+  margin-block-start: 0px;
+  white-space: initial;
+}
+.font-container {
+  width: 100px;
+  height: 60px;
+  max-width: 60px;
+  border: var(wall-border);
+  background-color: var(--color-dark-primary);
+  border-radius: var(--br-m);
+}
+
+.font-container select {
+  width: 45px;
+  margin-block-end: 0px;
 }
 
 input[type='file'] {

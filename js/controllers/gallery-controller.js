@@ -1,5 +1,4 @@
 function renderGalleryImgs() {
-  // var books = getBooks()
   const imgs = getImgs();
   console.log(imgs);
   var strHtmls = imgs.map(

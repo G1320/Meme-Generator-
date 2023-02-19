@@ -7,17 +7,14 @@ let gCurrImg;
 let gIsDrag;
 
 function renderCanvas() {
-  //Set the background color to grey
   gCtx.fillStyle = '#ede5ff59';
-  //Clear the canvas,  fill it with grey background
   gCtx.fillRect(0, 0, gElCanvas.width, gElCanvas.height);
   renderCircle();
 }
 
 function renderTexts() {
-  //prettier-ignore
-  gMeme.lines.forEach((line, idx )=> {
-    const {lat, lan, txt, size, align, color, font } = getLineInfo(idx);
+  gMeme.lines.forEach((line, idx) => {
+    const { lat, lan, txt, size, align, color, font } = getLineInfo(idx);
     drawText(txt, lan, lat, size, color, font, align);
   });
 }
@@ -93,7 +90,6 @@ function clearCanvas(isCalledViaElBtn) {
 
 function renderImg(img) {
   gCurrImg = img;
-  // Draw the img on the canvas
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
   renderTexts();
 }
