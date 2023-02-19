@@ -9,7 +9,7 @@
   --cell-size: 30px;
   --cell-content-size: 20px;
 
-  --wall-bg-color: rgba(211, 211, 211, 0.96);
+  --color-grey-primary: rgba(211, 211, 211, 0.96);
   --wall-border: 2px solid rgba(255, 255, 255, 0.509);
 
   --color-dark-primary: #27005e;

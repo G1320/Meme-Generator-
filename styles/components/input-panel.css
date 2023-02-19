@@ -1,6 +1,6 @@
 .input-panel {
   grid-template-columns: repeat(4, 1fr);
-  border: 6px solid var(--wall-bg-color);
+  border: 6px solid var(--color-grey-primary);
   width: 60vw;
   max-height: 380px;
 }
@@ -18,7 +18,7 @@
   height: 60px;
   max-width: 60px;
   border: var(wall-border);
-  background-color: var(--wall-bg-color);
+  background-color: var(--color-grey-primary);
   color: black;
   border-radius: var(--br-m);
 }
@@ -37,7 +37,7 @@
   height: 60px;
   max-width: 60px;
   border: var(wall-border);
-  background-color: var(--color-dark-primary);
+  background-color: var(--color-grey-primary);
   border-radius: var(--br-m);
 }
 
