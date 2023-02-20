@@ -38,18 +38,22 @@
       </div>
 
       <section class="input-panel grid col-5 row-4">
-        <input type="search" class="txt full " oninput="onChangedLineText()" type="text" name="txt" id="txt"
-          placeholder="txt" class="txt" />
-        <button onclick="onClickedAddLine()" class="plus btn-add-text">+</button>
-        <button onclick="onClickedMoveLine('up')" class="arrow btn-move-line-up">˄</button>
-        <button onclick="onClickedMoveLine('down')" class="arrow btn-move-line-down">˅</button>
-        <button onclick="onClickedSelectNextLine()" class="btn-select-next-line">Select Next</button>
-        <button onclick="onClickedSelectPrevLine()" class="btn-select-prev-line">Select Prev</button>
-        <input class="color-selector" type="color" oninput="onChangeColor(this.value) " value="#e07575" />
-        <button onclick="onClickedMoveLine('left')" class="arrow btn-move-line-Left">˂</button>
-        <button onclick="onClickedMoveLine('right')" class="arrow btn-move-line-right">˃</button>
+        <input title="Search" type="search" class="txt full " oninput="onChangedLineText()" type="text" name="txt"
+          id="txt" placeholder="txt" class="txt" />
+        <button title="Add Text" onclick="onClickedAddLine()" class="plus btn-add-text">+</button>
+        <button title="Move line up" onclick="onClickedMoveLine('up')" class="arrow btn-move-line-up">˄</button>
+        <button title="Move line down" onclick="onClickedMoveLine('down')" class="arrow btn-move-line-down">˅</button>
+        <button title="Select pervious text" onclick="onClickedSelectPrevLine()" class="btn-select-prev-line">Select
+          Prev</button>
+        <button title="Select next text" onclick="onClickedSelectNextLine()" class="btn-select-next-line">Select
+          Next</button>
+        <input title="color selector" class="color-selector" type="color" oninput="onChangeColor(this.value) "
+          value="#e07575" />
+        <button title="Move line left" onclick="onClickedMoveLine('left')" class="arrow btn-move-line-Left">˂</button>
+        <button title="Move line right" onclick="onClickedMoveLine('right')"
+          class="arrow btn-move-line-right">˃</button>
 
-        <div class="font-container">
+        <div title="Change font" class="font-container">
           <select id="fonts" onchange="onChangedFont(this.value)" class="font" type="text" name="font" id="font"
             name="fonts" id="fonts">
             <option value="Impact">Impact</option>
@@ -59,7 +63,7 @@
           <label class="font-container-label" for="fonts">Select Font</label>
 
         </div>
-        <div class="font-size-container">
+        <div title="Select font size" class="font-size-container">
           <label for="font-size">Font size</label>
 
           <input id="font-size" oninput="onChangedFontSize()" class="font-size " type="number" name="font-size"
@@ -71,10 +75,10 @@
         <button onclick="onAddEmoji('😇')" class="emoji-btn">😇</button>
         <button onclick="onAddEmoji('😤')" class="emoji-btn">😤</button>
         <button class="btn" onclick="onUploadImg()">Share</button>
-        <button onclick="saveCanvas()">Save</button>
-        <button onclick="clearCanvas(true)">Clear</button>
-        <a href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
-        <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+        <button title="Save meme" onclick="saveCanvas()">Save</button>
+        <button title="Clear text" onclick="clearCanvas(true)">Clear</button>
+        <a title="Download meme" href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+        <input title="Upload a file" type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
       </section>
 
   </div>
