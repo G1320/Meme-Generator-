@@ -3,7 +3,7 @@ function renderGalleryImgs() {
   console.log(imgs);
   var strHtmls = imgs.map(
     (img) => `
-      <img onclick="renderImg(this),showClickedPage('generator')" src="img/meme-imgs (square)/${img.url}" alt="">
+      <img onclick="renderImg(this),onShowClickedPage('generator')" src="img/meme-imgs (square)/${img.url}" alt="">
           `
   );
 
