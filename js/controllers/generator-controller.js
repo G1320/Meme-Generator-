@@ -9,9 +9,9 @@ function onInit() {
 }
 
 function onShowClickedPage(pageName) {
-  let generatorPage = document.querySelector('.generator-page');
-  let galleryPage = document.querySelector('.gallery-page');
-  let aboutPage = document.querySelector('.about-page');
+  const generatorPage = document.querySelector('.generator-page');
+  const galleryPage = document.querySelector('.gallery-page');
+  const aboutPage = document.querySelector('.about-page');
   generatorPage.hidden = true;
   galleryPage.hidden = true;
   aboutPage.hidden = true;

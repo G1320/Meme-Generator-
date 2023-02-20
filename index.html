@@ -41,16 +41,16 @@
         <input title="Search" type="search" class="txt full " oninput="onChangedLineText()" type="text" name="txt"
           id="txt" placeholder="txt" class="txt" />
         <button title="Add Text" onclick="onClickedAddLine()" class="plus btn-add-text">+</button>
-        <button title="Move line up" onclick="onClickedMoveLine('up')" class="arrow btn-move-line-up">˄</button>
-        <button title="Move line down" onclick="onClickedMoveLine('down')" class="arrow btn-move-line-down">˅</button>
+        <button title="Move text up" onclick="onClickedMoveLine('up')" class="arrow btn-move-line-up">˄</button>
+        <button title="Move text down" onclick="onClickedMoveLine('down')" class="arrow btn-move-line-down">˅</button>
         <button title="Select pervious text" onclick="onClickedSelectPrevLine()" class="btn-select-prev-line">Select
           Prev</button>
         <button title="Select next text" onclick="onClickedSelectNextLine()" class="btn-select-next-line">Select
           Next</button>
         <input title="color selector" class="color-selector" type="color" oninput="onChangeColor(this.value) "
           value="#e07575" />
-        <button title="Move line left" onclick="onClickedMoveLine('left')" class="arrow btn-move-line-Left">˂</button>
-        <button title="Move line right" onclick="onClickedMoveLine('right')"
+        <button title="Move text left" onclick="onClickedMoveLine('left')" class="arrow btn-move-line-Left">˂</button>
+        <button title="Move text right" onclick="onClickedMoveLine('right')"
           class="arrow btn-move-line-right">˃</button>
 
         <div title="Change font" class="font-container">
@@ -61,11 +61,10 @@
             <option value="Ariel">Ariel</option>
           </select>
           <label class="font-container-label" for="fonts">Select Font</label>
-
         </div>
-        <div title="Select font size" class="font-size-container">
-          <label for="font-size">Font size</label>
 
+        <div title="Select font size" class="font-size-container">
+          <label for="font-size">Font Size</label>
           <input id="font-size" oninput="onChangedFontSize()" class="font-size " type="number" name="font-size"
             id="font-size" placeholder="font-size" class="font-size" value="22" />
         </div>
