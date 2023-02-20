@@ -1,3 +1,9 @@
+section.nav {
+  margin: 10px 10px;
+  border-radius: 35px;
+  border: var(--wall-border);
+}
+
 .main-menu {
   background-color: var(--color-dark-primary);
   height: 100%;
