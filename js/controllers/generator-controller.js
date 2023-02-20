@@ -93,3 +93,20 @@ function onAddEmoji(emoji) {
   updateTextInput(emoji);
   createLine();
 }
+
+function onClearCanvas(isCalledViaBtn) {
+  clearCanvas(isCalledViaBtn);
+  renderSelectedLineIdx();
+}
+
+function onSaveCanvas() {
+  // saveCanvas();
+}
+
+function onDownloadCanvas(canvas) {
+  downloadCanvas(canvas);
+}
+
+function onImgInput(ev) {
+  loadImageFromInput(ev, renderImg);
+}

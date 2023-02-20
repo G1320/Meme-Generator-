@@ -80,7 +80,7 @@ function clearCanvas(isCalledViaElBtn) {
       gMeme.selectedLineIdx = -1;
     } else {
       gMeme.lines.pop();
-      gMeme.selectedLineIdx--;
+      gMeme.selectedLineIdx = gMeme.lines.length - 1;
     }
   }
   gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height);

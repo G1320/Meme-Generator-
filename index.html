@@ -74,9 +74,9 @@
         <button onclick="onAddEmoji('😇')" class="emoji-btn">😇</button>
         <button onclick="onAddEmoji('😤')" class="emoji-btn">😤</button>
         <button class="btn" onclick="onUploadImg()">Share</button>
-        <button title="Save meme" onclick="saveCanvas()">Save</button>
-        <button title="Clear text" onclick="clearCanvas(true)">Clear</button>
-        <a title="Download meme" href="#" onclick="downloadCanvas(this)" download="file-name">Download</a>
+        <button title="Save meme" onclick="onSaveCanvas()">Save</button>
+        <button title="Clear text" onclick="onClearCanvas(true)">Clear</button>
+        <a title="Download meme" href="#" onclick="onDownloadCanvas(this)" download="file-name">Download</a>
         <input title="Upload a file" type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
       </section>
 
