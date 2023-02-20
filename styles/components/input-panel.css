@@ -48,6 +48,11 @@
   font-size: 1.3em !important;
 }
 
+.arrow,
+.plus {
+  font-size: 1em !important;
+}
+
 .font-container {
   width: 100px;
   height: 60px;

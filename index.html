@@ -40,14 +40,14 @@
       <section class="input-panel grid col-5 row-4">
         <input type="search" class="txt full " oninput="onChangedLineText()" type="text" name="txt" id="txt"
           placeholder="txt" class="txt" />
-        <button onclick="onClickedAddLine()" class="btn-add-text">+</button>
-        <button onclick="onClickedMoveLine('up')" class="btn-move-line-up">˄</button>
-        <button onclick="onClickedMoveLine('down')" class="btn-move-line-down">˅</button>
+        <button onclick="onClickedAddLine()" class="plus btn-add-text">+</button>
+        <button onclick="onClickedMoveLine('up')" class="arrow btn-move-line-up">˄</button>
+        <button onclick="onClickedMoveLine('down')" class="arrow btn-move-line-down">˅</button>
         <button onclick="onClickedSelectNextLine()" class="btn-select-next-line">Select Next</button>
         <button onclick="onClickedSelectPrevLine()" class="btn-select-prev-line">Select Prev</button>
         <input class="color-selector" type="color" oninput="onChangeColor(this.value) " value="#e07575" />
-        <button onclick="onClickedMoveLine('left')" class="btn-move-line-Left">˂</button>
-        <button onclick="onClickedMoveLine('right')" class="btn-move-line-right">˃</button>
+        <button onclick="onClickedMoveLine('left')" class="arrow btn-move-line-Left">˂</button>
+        <button onclick="onClickedMoveLine('right')" class="arrow btn-move-line-right">˃</button>
 
         <div class="font-container">
           <select id="fonts" onchange="onChangedFont(this.value)" class="font" type="text" name="font" id="font"
