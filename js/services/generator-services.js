@@ -34,7 +34,7 @@ function createLine() {
 }
 
 function getLineInfo(selectedLineIdx) {
-  if (!gMeme.lines.length) return null;
+  if (!gMeme.lines.length) return;
   return gMeme.lines[selectedLineIdx];
 }
 

@@ -8,7 +8,7 @@ function onInit() {
   renderGalleryImgs();
 }
 
-function showClickedPage(pageName) {
+function onShowClickedPage(pageName) {
   let generatorPage = document.querySelector('.generator-page');
   let galleryPage = document.querySelector('.gallery-page');
   let aboutPage = document.querySelector('.about-page');
@@ -43,8 +43,8 @@ function clearTextInput() {
 }
 
 function updateTextInput(value) {
-  const line = getLineInfo(gMeme.selectedLineIdx);
-  document.querySelector('.txt').value = value || line.txt;
+  const lineInfo = getLineInfo(gMeme.selectedLineIdx);
+  document.querySelector('.txt').value = value || lineInfo.txt;
 }
 
 function onClickedAddLine() {
